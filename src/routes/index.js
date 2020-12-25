@@ -50,9 +50,8 @@ import LockScreen from "../pages/AuthenticationInner/auth-lock-screen";
 
   // Dashboard
 import Dashboard from "../pages/Dashboard/index";
-import DashboardSaas from "../pages/Dashboard-saas/index";
-import DashboardCrypto from "../pages/Dashboard-crypto/index";
 
+import CustomPC from "../pages/Custom-PC/CustomPC";
  //Crypto
 import CryptoWallet from "../pages/Crypto/crypto-wallet";
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell";
@@ -92,7 +91,6 @@ import FormMask from "../pages/Forms/FormMask";
 import FormRepeater from "../pages/Forms/FormRepeater";
 import FormUpload from "../pages/Forms/FormUpload";
 import FormWizard from "../pages/Forms/FormWizard";
-import FormXeditable from "../pages/Forms/FormXeditable";
 
 //Pages
 import PagesStarter from "../pages/Utility/pages-starter";
@@ -109,11 +107,12 @@ import ContactsGrid from "../pages/Contacts/contacts-grid";
 import ContactsList from "../pages/Contacts/contacts-list";
 import ContactsProfile from "../pages/Contacts/contacts-profile";
 
+
 const publicRoutes = [
 
 	{ path: "/dashboard", component: Dashboard },
-	{ path: "/dashboard-saas", component: DashboardSaas },
-	{ path: "/dashboard-crypto", component: DashboardCrypto },
+
+	{ path: '/custom-pc', component: CustomPC},
 
 	//Crypto
 	{ path : "/crypto-wallet", component : CryptoWallet },
@@ -200,7 +199,6 @@ const publicRoutes = [
 	{ path: "/pages-faqs", component: PagesFaqs },
 	{ path: "/pages-pricing", component: PagesPricing },
 
-	// this route should be at the end of all other routes
 	{ path: "/", exact: true, component: () => <Redirect to="/dashboard" /> }
 ];
 

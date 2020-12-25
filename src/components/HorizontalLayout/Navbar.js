@@ -61,115 +61,29 @@ class Navbar extends Component {
                     <div className="container">
                         <nav className="navbar navbar-light navbar-expand-lg topnav-menu" id="navigation">
                             <Collapse isOpen={this.props.menuOpen} className="navbar-collapse" id="topnav-menu-content">
-                                <ul className="navbar-nav" style={{width: '100%', justifyContent: 'space-between'}}>
+                                <ul className="navbar-nav" style={{width: '100%', justifyContent: 'space-evenly'}}>
                                     <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle arrow-none" onClick={e => { e.preventDefault(); this.setState({ isDashboard: !this.state.isDashboard }); }} to="dashboard">
-                                            <i className="bx bx-home-circle mr-2"/>Dashboard
+                                        <Link className="nav-link dropdown-toggle arrow-none"
+                                             to="/dashboard">
+                                            <i className="bx bx-home-circle mr-2"/>DASHBOARD
                                         </Link>
                                     </li>
 
                                     <li className="nav-item dropdown">
                                         <Link to="/#" onClick={e => { e.preventDefault(); this.setState({ appState: !this.state.appState }); }} className="nav-link dropdown-toggle arrow-none"  >
-                                            <i className="bx bx-customize mr-2"></i>{this.props.t('Apps')} <div className="arrow-down"></div>
+                                            <i className="bx bx-customize mr-2"/>CUSTOM PC <div className="arrow-down"/>
                                         </Link>
                                         <div className={classname("dropdown-menu", { show: this.state.appState })} >
-                                            <Link to="calendar" className="dropdown-item">{this.props.t('Calendar')}</Link>
-                                            <Link to="chat" className="dropdown-item">{this.props.t('Chat')}</Link>
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ emailState: !this.state.emailState });
-                                                    }}>
-                                                    {this.props.t('Email')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.emailState })} >
-                                                    <Link to="email-inbox" className="dropdown-item">{this.props.t('Inbox')}</Link>
-                                                    <Link to="email-read" className="dropdown-item">{this.props.t('Read Email')}</Link>
-                                                </div>
-                                            </div>
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ ecommerceState: !this.state.ecommerceState });
-                                                    }}>
-                                                   {this.props.t(' Ecommerce')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.ecommerceState })}>
-                                                    <Link to="ecommerce-products" className="dropdown-item">{this.props.t('Products')}</Link>
-                                                    <Link to="ecommerce-product-detail" className="dropdown-item">{this.props.t('Product Detail')}</Link>
-                                                    <Link to="ecommerce-orders" className="dropdown-item">{this.props.t('Orders')}</Link>
-                                                    <Link to="ecommerce-customers" className="dropdown-item">{this.props.t('Customers')}</Link>
-                                                    <Link to="ecommerce-cart" className="dropdown-item">{this.props.t('Cart')}</Link>
-                                                    <Link to="ecommerce-checkout" className="dropdown-item">{this.props.t('Checkout')}</Link>
-                                                    <Link to="ecommerce-shops" className="dropdown-item">{this.props.t('Shops')}</Link>
-                                                    <Link to="ecommerce-add-product" className="dropdown-item">{this.props.t('Add Product')}</Link>
-                                                </div>
-                                            </div>
+                                            <Link to="/products/cpu" className="dropdown-item">CPU's</Link>
+                                            <Link to="/products/memory" className="dropdown-item">MEMORY</Link>
+                                            <Link to="/products/motherboard" className="dropdown-item">MOTHERBOARD</Link>
+                                            <Link to="/products/video-card" className="dropdown-item">VIDEO CARD</Link>
+                                            <Link to="/products/power-supply" className="dropdown-item">POWER SUPPLY</Link>
+                                            <Link to="/products/cpu-cooler" className="dropdown-item">CPU COOLER</Link>
+                                            <Link to="/products/case" className="dropdown-item">CASES</Link>
+                                            <Link to="/products/storage" className="dropdown-item">STORAGE</Link>
+                                            <Link to="/products/software" className="dropdown-item">OPERATING SOFTWARE</Link>
 
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ isCrypto: !this.state.isCrypto });
-                                                    }}>
-                                                   {this.props.t('Crypto')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.isCrypto })}>
-                                                <Link to="crypto-wallet" className="dropdown-item">{this.props.t('Wallet')}</Link>
-                                                <Link to="crypto-buy-sell" className="dropdown-item">{this.props.t('Buy/Sell')}</Link>
-                                                <Link to="crypto-exchange" className="dropdown-item">{this.props.t('Exchange')}</Link>
-                                                <Link to="crypto-lending" className="dropdown-item">{this.props.t('Lending')}</Link>
-                                                <Link to="crypto-orders" className="dropdown-item">{this.props.t('Orders')}</Link>
-                                                <Link to="crypto-kyc-application" className="dropdown-item">{this.props.t('KYC Application')}</Link>
-                                                <Link to="crypto-ico-landing" className="dropdown-item">{this.props.t('ICO Landing')}</Link>
-                                                </div>
-                                            </div>
-
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ projectState: !this.state.projectState });
-                                                    }}>
-                                                    {this.props.t('Projects')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.projectState })}>
-                                                    <Link to="projects-grid" className="dropdown-item">{this.props.t('Projects Grid')}</Link>
-                                                    <Link to="projects-list" className="dropdown-item">{this.props.t('Projects List')}</Link>
-                                                    <Link to="projects-overview" className="dropdown-item">{this.props.t('Project Overview')}</Link>
-                                                    <Link to="projects-create" className="dropdown-item">{this.props.t('Create New')}</Link>
-                                                </div>
-                                            </div>
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ taskState: !this.state.taskState });
-                                                    }}>
-                                                  {this.props.t('Tasks')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.taskState })}>
-                                                    <Link to="tasks-list" className="dropdown-item">{this.props.t('Task List')}</Link>
-                                                    <Link to="tasks-kanban" className="dropdown-item">{this.props.t('Kanban Board')}</Link>
-                                                    <Link to="tasks-create" className="dropdown-item">{this.props.t('Create Task')}</Link>
-                                                </div>
-                                            </div>
-                                            <div className="dropdown">
-                                                <Link to="/#" className="dropdown-item dropdown-toggle arrow-none"
-                                                    onClick={e => {
-                                                        e.preventDefault();
-                                                        this.setState({ contactState: !this.state.contactState });
-                                                    }}>
-                                                    {this.props.t('Contacts')} <div className="arrow-down"></div>
-                                                </Link>
-                                                <div className={classname("dropdown-menu", { show: this.state.contactState })}>
-                                                    <Link to="contacts-grid" className="dropdown-item">{this.props.t('User Grid')}</Link>
-                                                    <Link to="contacts-list" className="dropdown-item">{this.props.t('User List')}</Link>
-                                                    <Link to="contacts-profile" className="dropdown-item">{this.props.t('Profile')}</Link>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
 

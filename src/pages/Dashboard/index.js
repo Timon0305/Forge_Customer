@@ -9,56 +9,49 @@ import CustomKit from "./CustomKit";
 import CustomReview from "./CustomReview";
 import GamePlay from "./GamePlay";
 
-class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
+const Dashboard = () => {
+    return (
+        <React.Fragment>
+            <div className="page-content" style={styles.container}>
+                <Container fluid>
 
-    render() {
-        return (
-            <React.Fragment>
-                <div className="page-content" style={styles.container}>
-                    <Container fluid>
+                    <Row>
+                        <Col xl="12" style={styles.videoStyle}>
+                            <Video />
+                        </Col>
+                    </Row>
 
-                        <Row>
-                            <Col xl="12" style={styles.videoStyle}>
-                                <Video />
-                            </Col>
-                        </Row>
+                    <Row className='mt-4'>
+                        <Col lg="12" style={styles.videoStyle}>
+                            <Prebuild />
+                        </Col>
+                    </Row>
 
-                        <Row className='mt-4'>
-                            <Col lg="12" style={styles.videoStyle}>
-                                <Prebuild />
-                            </Col>
-                        </Row>
+                    <Row>
+                        <Col xl="6">
+                            <CustomPC />
+                        </Col>
+                        <Col xl="6">
+                            <CustomKit />
+                        </Col>
 
-                        <Row>
-                            <Col xl="6">
-                                <CustomPC />
-                            </Col>
-                            <Col xl="6">
-                                <CustomKit />
-                            </Col>
+                    </Row>
 
-                        </Row>
+                    <Row className='mt-3'>
+                        <Col xl="6">
+                            <CustomReview />
+                        </Col>
+                        <Col xl="6">
+                            <GamePlay />
+                        </Col>
 
-                        <Row className='mt-3'>
-                            <Col xl="6">
-                                <CustomReview />
-                            </Col>
-                            <Col xl="6">
-                                <GamePlay />
-                            </Col>
+                    </Row>
 
-                        </Row>
-
-                    </Container>
-                </div>
-            </React.Fragment>
-        );
-    }
-}
+                </Container>
+            </div>
+        </React.Fragment>
+    )
+};
 
 export default withNamespaces()(Dashboard);
 
