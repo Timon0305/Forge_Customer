@@ -8,7 +8,7 @@
     right: 0;
     left: 0;
     z-index: 1002;
-    background-color: $header-bg;
+    background-color: #1b1d23;
     box-shadow: $box-shadow;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .page-content {
-    padding: calc(#{$header-height} + #{$grid-gutter-width}) calc(#{$grid-gutter-width} / 2) $footer-height calc(#{$grid-gutter-width} / 2);
+    padding: calc(#{$header-height} + #{$grid-gutter-width}) calc(#{$grid-gutter-width} / 2) 0px calc(#{$grid-gutter-width} / 2);
 }
 
 .header-item {
@@ -183,7 +183,7 @@
 
 body[data-topbar="dark"] {
     #page-topbar { 
-        background-color: $header-dark-bg;
+        background-color: #1b1d23;
     }
     .navbar-header {
         .dropdown.show {

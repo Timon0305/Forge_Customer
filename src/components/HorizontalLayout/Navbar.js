@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Collapse } from "reactstrap";
+import {Collapse } from "reactstrap";
 import { Link, withRouter } from "react-router-dom";
 import classname from "classnames";
 
@@ -66,52 +66,6 @@ class Navbar extends Component {
                                         <Link className="nav-link dropdown-toggle arrow-none" onClick={e => { e.preventDefault(); this.setState({ isDashboard: !this.state.isDashboard }); }} to="dashboard">
                                             <i className="bx bx-home-circle mr-2"/>Dashboard
                                         </Link>
-                                    </li>
-
-                                    <li className="nav-item dropdown">
-                                        <Link to="/#" onClick={e => { e.preventDefault(); this.setState({ uiState: !this.state.uiState }); }} className="nav-link dropdown-toggle arrow-none">
-                                            <i className="bx bx-tone mr-2"></i>{this.props.t('UI Elements')} <div className="arrow-down"></div>
-                                        </Link>
-                                        <div
-                                            className={classname(
-                                                "dropdown-menu mega-dropdown-menu dropdown-menu-left dropdown-mega-menu-xl",
-                                                { show: this.state.uiState })}>
-                                            <Row>
-                                                <Col lg={4}>
-                                                    <div>
-                                                        <Link to="ui-alerts" className="dropdown-item">{this.props.t('Alerts')}</Link>
-                                                        <Link to="ui-buttons" className="dropdown-item">{this.props.t('Buttons')}</Link>
-                                                        <Link to="ui-cards" className="dropdown-item">{this.props.t('Cards')}</Link>
-                                                        <Link to="ui-carousel" className="dropdown-item">{this.props.t('Carousel')}</Link>
-                                                        <Link to="ui-dropdowns" className="dropdown-item">{this.props.t('Dropdowns')}</Link>
-                                                        <Link to="ui-grid" className="dropdown-item">{this.props.t('Grid')}</Link>
-                                                        <Link to="ui-images" className="dropdown-item">{this.props.t('Images')}</Link>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={4}>
-                                                    <div>
-                                                        <Link to="ui-lightbox" className="dropdown-item">{this.props.t('Lightbox')}</Link>
-                                                        <Link to="ui-modals" className="dropdown-item">{this.props.t('Modals')}</Link>
-                                                        <Link to="ui-rangeslider" className="dropdown-item">{this.props.t('Range Slider')}</Link>
-                                                        <Link to="ui-session-timeout" className="dropdown-item">{this.props.t('Session Timeout')}</Link>
-                                                        <Link to="ui-progressbars" className="dropdown-item">{this.props.t('Progress Bars')}</Link>
-                                                        <Link to="ui-sweet-alert" className="dropdown-item">{this.props.t('Sweet-Alert')}</Link>
-                                                        <Link to="ui-tabs-accordions" className="dropdown-item">{this.props.t('Tabs & Accordions')}</Link>
-                                                    </div>
-                                                </Col>
-                                                <Col lg={4}>
-                                                    <div>
-                                                        <Link to="ui-typography" className="dropdown-item">{this.props.t('Typography')}</Link>
-                                                        <Link to="ui-video" className="dropdown-item">{this.props.t('Video')}</Link>
-                                                        <Link to="ui-general" className="dropdown-item">{this.props.t('General')}</Link>
-                                                        <Link to="ui-colors" className="dropdown-item">{this.props.t('Colors')}</Link>
-                                                        <Link to="ui-rating" className="dropdown-item">{this.props.t('Rating')}</Link>
-                                                        <Link to="ui-notifications" className="dropdown-item">{this.props.t('Notifications')}</Link>
-                                                        <Link to="ui-image-cropper" className="dropdown-item">{this.props.t('Image Cropper')}</Link>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
                                     </li>
 
                                     <li className="nav-item dropdown">

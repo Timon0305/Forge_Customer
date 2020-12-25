@@ -194,7 +194,7 @@ body[data-layout="horizontal"] .navbar-brand-box {
 
 body[data-layout="horizontal"] .page-content {
   margin-top: 44px;
-  padding: calc(55px + 24px) calc(24px / 2) 60px calc(24px / 2); }
+  padding: calc(55px + 24px) calc(24px / 2) 0px calc(24px / 2); }
 
 @media (max-width: 992px) {
   body[data-layout="horizontal"] .page-content {
@@ -213,11 +213,11 @@ body[data-layout="horizontal"] .page-content {
 .footer {
   bottom: 0;
   padding: 20px calc(24px / 2);
-  position: absolute;
+  /*position: absolute;*/
   right: 0;
   color: #74788d;
   left: 250px;
-  height: 60px;
+  /*height: 60px;*/
   background-color: #f2f2f5; }
 
 @media (max-width: 992px) {

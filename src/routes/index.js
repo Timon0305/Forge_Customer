@@ -71,11 +71,6 @@ import SparklineChart from "../pages/Charts/SparklineChart";
 import ToastUIChart from "../pages/Charts/ToastUIChart";
 import ChartsKnob from "../pages/Charts/charts-knob";
 
-// Maps
-import MapsGoogle from "../pages/Maps/MapsGoogle";
-import MapsVector from "../pages/Maps/MapsVector";
-import MapsLeaflet from "../pages/Maps/MapsLeaflet";
-
 //Icons
 import IconBoxicons from "../pages/Icons/IconBoxicons";
 import IconDripicons from "../pages/Icons/IconDripicons";
@@ -98,29 +93,6 @@ import FormRepeater from "../pages/Forms/FormRepeater";
 import FormUpload from "../pages/Forms/FormUpload";
 import FormWizard from "../pages/Forms/FormWizard";
 import FormXeditable from "../pages/Forms/FormXeditable";
-
-//Ui
-import UiAlert from "../pages/Ui/UiAlert";
-import UiButtons from "../pages/Ui/UiButtons";
-import UiCards from "../pages/Ui/UiCards";
-import UiCarousel from "../pages/Ui/UiCarousel";
-import UiColors from "../pages/Ui/UiColors";
-import UiDropdown from "../pages/Ui/UiDropdown";
-import UiGeneral from "../pages/Ui/UiGeneral";
-import UiGrid from "../pages/Ui/UiGrid";
-import UiImages from "../pages/Ui/UiImages";
-import UiLightbox from "../pages/Ui/UiLightbox";
-import UiModal from "../pages/Ui/UiModal";
-import UiProgressbar from "../pages/Ui/UiProgressbar";
-import UiSweetAlert from "../pages/Ui/UiSweetAlert";
-import UiTabsAccordions from "../pages/Ui/UiTabsAccordions";
-import UiTypography from "../pages/Ui/UiTypography";
-import UiVideo from "../pages/Ui/UiVideo";
-import UiSessionTimeout from "../pages/Ui/UiSessionTimeout";
-import UiRating from "../pages/Ui/UiRating";
-import UiRangeSlider from "../pages/Ui/UiRangeSlider";
-import UiNotifications from "../pages/Ui/ui-notifications";
-import UiImageCropper from "../pages/Ui/ui-image-cropper";
 
 //Pages
 import PagesStarter from "../pages/Utility/pages-starter";
@@ -212,11 +184,6 @@ const publicRoutes = [
 	{ path: "/tables-responsive", component: ResponsiveTables },
 	{ path: "/tables-editable", component: EditableTables },
 
-	// Maps
-	{ path: "/maps-google", component: MapsGoogle },
-	{ path: "/maps-vector", component: MapsVector },
-	{ path: "/maps-leaflet", component: MapsLeaflet },
-
 	// Forms
 	{ path: "/form-elements", component: FormElements },
 	{ path: "/form-advanced", component: FormAdvanced },
@@ -226,30 +193,6 @@ const publicRoutes = [
 	{ path: "/form-uploads", component: FormUpload },
 	{ path: "/form-wizard", component: FormWizard },
 	{ path: "/form-validation", component: FormValidations },
-	{ path: "/form-xeditable", component: FormXeditable },
-
-	// Ui
-	{ path: "/ui-alerts", component: UiAlert },
-	{ path: "/ui-buttons", component: UiButtons },
-	{ path: "/ui-cards", component: UiCards },
-	{ path: "/ui-carousel", component: UiCarousel },
-	{ path: "/ui-colors", component: UiColors },
-	{ path: "/ui-dropdowns", component: UiDropdown },
-	{ path: "/ui-general", component: UiGeneral },
-	{ path: "/ui-grid", component: UiGrid },
-	{ path: "/ui-images", component: UiImages },
-	{ path: "/ui-lightbox", component: UiLightbox },
-	{ path: "/ui-modals", component: UiModal },
-	{ path: "/ui-progressbars", component: UiProgressbar },
-	{ path: "/ui-sweet-alert", component: UiSweetAlert },
-	{ path: "/ui-tabs-accordions", component: UiTabsAccordions },
-	{ path: "/ui-typography", component: UiTypography },
-	{ path: "/ui-video", component: UiVideo },
-	{ path: "/ui-session-timeout", component: UiSessionTimeout },
-	{ path: "/ui-rating", component: UiRating },
-	{ path: "/ui-rangeslider", component: UiRangeSlider },
-	{ path: "/ui-notifications", component: UiNotifications },
-	{ path: "/ui-image-cropper", component: UiImageCropper },
 
 	//Utility
 	{ path: "/pages-starter", component: PagesStarter },
