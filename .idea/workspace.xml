@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96792bb-1a5d-424a-8180-b19dd94150c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/Products.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/RestApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Custom-Video.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Custom-Video.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Filter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/CustomPC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/CustomPC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +28,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="89" />
+          <entry key="JavaScript" value="90" />
           <entry key="SCSS" value="9" />
           <entry key="TypeScript" value="5" />
         </counts>
@@ -66,24 +51,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-693">
-              <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#207#257#0" expanded="true" />
-                <element signature="e#380#439#0" expanded="true" />
-                <element signature="e#651#720#0" expanded="true" />
-                <element signature="e#1218#1270#0" expanded="true" />
-                <element signature="e#1490#1540#0" expanded="true" />
-                <element signature="e#4413#4472#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -167,11 +134,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-77">
               <caret column="49" selection-start-column="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="37" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -345,17 +321,17 @@
       <option name="presentableId" value="Default" />
       <updated>1608838698618</updated>
       <workItem from="1608838699850" duration="21377000" />
-      <workItem from="1608893564947" duration="46838000" />
+      <workItem from="1608893564947" duration="47509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68215000" />
+    <option name="totallyTimeSpent" value="68886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960339" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -370,7 +346,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32261768" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32261768" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -388,13 +364,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-player/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/css/app-dark.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -777,6 +746,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77">
           <caret column="49" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="37" />
         </state>
       </provider>
     </entry>
