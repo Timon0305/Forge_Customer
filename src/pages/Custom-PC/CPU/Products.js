@@ -44,7 +44,7 @@ const Products = (props) => {
                                                 product.price.length ?
                                                     <b>{product.price}</b>
                                                     :
-                                                    <del>process</del>
+                                                    <del>Out of Stock</del>
                                             }
                                         </h5>
                                         <Button className='mt-2 btn btn-block btn-sm btn-success'>Add</Button>
