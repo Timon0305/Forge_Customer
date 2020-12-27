@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardBody, CardTitle, Form, Label, Input, Nav, NavItem, NavLink, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Row, Col, Card, CardBody, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 import { Link } from "react-router-dom";
 import StarRatings from 'react-star-ratings';
 

@@ -1,25 +1,12 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 import {
-    Container,
     Table,
-    Row,
-    Col,
     Card,
     CardBody,
-    CardTitle,
-    Form,
     Label,
     Input,
-    Nav,
-    NavItem,
-    NavLink,
-    Pagination,
-    PaginationItem,
-    PaginationLink,
     Button
 } from 'reactstrap';
-import Nouislider from "nouislider-react";
 import useViewModel from './props';
 import './custom.scss';
 

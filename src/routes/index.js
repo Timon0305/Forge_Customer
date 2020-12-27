@@ -51,7 +51,6 @@ import LockScreen from "../pages/AuthenticationInner/auth-lock-screen";
   // Dashboard
 import Dashboard from "../pages/Dashboard/index";
 
-import CustomPC from "../pages/Custom-PC/CustomPC";
  //Crypto
 import CryptoWallet from "../pages/Crypto/crypto-wallet";
 import CryptoBuySell from "../pages/Crypto/crypto-buy-sell";
@@ -106,13 +105,14 @@ import Pages500 from "../pages/Utility/pages-500";
 import ContactsGrid from "../pages/Contacts/contacts-grid";
 import ContactsList from "../pages/Contacts/contacts-list";
 import ContactsProfile from "../pages/Contacts/contacts-profile";
+import CPU from "../pages/Custom-PC/CPU/index";
 
 
 const publicRoutes = [
 
 	{ path: "/dashboard", component: Dashboard },
 
-	{ path: '/custom-pc', component: CustomPC},
+	{ path: '/products/cpu', component: CPU},
 
 	//Crypto
 	{ path : "/crypto-wallet", component : CryptoWallet },

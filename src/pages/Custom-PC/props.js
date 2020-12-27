@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-
 import product1 from "../../assets/images/product/img-1.png";
 import product2 from "../../assets/images/product/img-2.png";
 import product3 from "../../assets/images/product/img-3.png";
@@ -17,16 +16,13 @@ function useViewModel(props) {
         { id: 6, image: product6, name: "Green color T-shirt", link: "#", rating: 4, oldPrice: 138, newPrice: 135, isOffer: true, offer: -28 },
     ]);
 
-    const [categoryMenu, setCategoryMenu] = useState(false);
+    useEffect(() => {
+        const url = new URLSearchParams(window.location.search).get('category');
 
-    const menuToggle = () => {
-        setCategoryMenu(!categoryMenu)
-    };
+    });
 
     return {
         products, setProducts,
-        categoryMenu, setCategoryMenu,
-        menuToggle,
     }
 }
 

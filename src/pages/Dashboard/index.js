@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col} from "reactstrap";
 
 import { withNamespaces } from 'react-i18next';

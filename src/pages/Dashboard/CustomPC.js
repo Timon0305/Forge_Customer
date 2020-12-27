@@ -2,7 +2,7 @@ import React from "react";
 import {withNamespaces} from "react-i18next";
 
 import classes from './BackgroundVideo.module.css';
-import {Button, Card, CardBody, Col, Row} from "reactstrap";
+import {Button, Card, CardBody} from "reactstrap";
 
 const CustomPC = () => {
     const videoSource = "https://lytetechnology.com/wp-content/uploads/2020/10/1-1.mp4";

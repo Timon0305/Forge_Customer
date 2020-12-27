@@ -2,7 +2,6 @@ import React from "react";
 import {withNamespaces} from "react-i18next";
 
 import classes from '../Dashboard/BackgroundVideo.module.css';
-import {Button} from "reactstrap";
 
 const CustomVideo = () => {
     const videoSource = "https://lytetechnology.com/wp-content/uploads/2020/10/2-black-bars-remix.mp4";
