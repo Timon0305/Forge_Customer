@@ -13,7 +13,7 @@ const Video = () => {
 
             <div className={classes.Content}>
                 <div className={classes.SubContent} >
-                    <h1 className='text-white' style={{fontSize: '50px'}}>The Forge PCs</h1>
+                    {/*<h1 className='text-white' style={{fontSize: '50px'}}>The Forge PCs</h1>*/}
                 </div>
             </div>
         </div>

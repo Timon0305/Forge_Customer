@@ -4,7 +4,7 @@ import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import Filters from "./Filters";
 import Products from "./Products";
-const CPU = () => {
+const Storage = () => {
 
     return (
         <React.Fragment>
@@ -37,7 +37,7 @@ const CPU = () => {
     )
 };
 
-export default CPU
+export default Storage
 
 const styles = {
     container : {

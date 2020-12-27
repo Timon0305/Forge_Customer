@@ -6,8 +6,6 @@ import { connect } from "react-redux";
 import { authProtectedRoutes, publicRoutes } from "./routes/";
 import AppRoute from "./routes/route";
 
-// layouts
-import VerticalLayout from "./components/VerticalLayout/";
 import HorizontalLayout from "./components/HorizontalLayout/";
 
 import "./assets/scss/theme.scss";
@@ -27,14 +25,14 @@ class App extends Component {
 	 * Returns the layout
 	 */
 	getLayout = () => {
-		let layoutCls = VerticalLayout;
+		let layoutCls = HorizontalLayout;
 
 		switch (this.props.layout.layoutType) {
 			case "horizontal":
 				layoutCls = HorizontalLayout;
 				break;
 			default:
-				layoutCls = VerticalLayout;
+                layoutCls = HorizontalLayout;
 				break;
 		}
 		return layoutCls;

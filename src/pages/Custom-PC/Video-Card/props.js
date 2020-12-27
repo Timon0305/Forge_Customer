@@ -9,9 +9,10 @@ function useViewModel(props) {
     }, []);
 
     const fetchData = async () => {
-        let res = await RestApi.fetchCPU();
-        setProductLength(res['data']['cpu'].length);
-        setProducts(res['data']['cpu'])
+        let res = await RestApi.fetchVideoCard();
+        console.log(res)
+        setProductLength(res['data']['video'].length);
+        setProducts(res['data']['video'])
     };
 
     return {

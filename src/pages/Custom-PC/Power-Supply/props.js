@@ -9,9 +9,9 @@ function useViewModel(props) {
     }, []);
 
     const fetchData = async () => {
-        let res = await RestApi.fetchCPU();
-        setProductLength(res['data']['cpu'].length);
-        setProducts(res['data']['cpu'])
+        let res = await RestApi.fetchPowerSupply();
+        setProductLength(res['data']['power'].length);
+        setProducts(res['data']['power'])
     };
 
     return {
