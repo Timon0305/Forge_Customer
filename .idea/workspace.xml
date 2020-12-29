@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e96792bb-1a5d-424a-8180-b19dd94150c8" name="Default Changelist" comment="" />
+    <list default="true" id="e96792bb-1a5d-424a-8180-b19dd94150c8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -25,8 +33,8 @@
           <entry key="CSS" value="10" />
           <entry key="HTML" value="3" />
           <entry key="Image" value="2" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="229" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="230" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="12" />
           <entry key="TypeScript" value="5" />
@@ -42,6 +50,7 @@
         <counts>
           <entry key="CSS" value="272" />
           <entry key="HTML" value="28" />
+          <entry key="JSON" value="5" />
           <entry key="JavaScript" value="16696" />
           <entry key="SCSS" value="378" />
         </counts>
@@ -51,22 +60,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2354">
-              <caret line="107" column="45" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="107" selection-end-column="45" />
+              <caret line="107" column="45" selection-start-line="102" selection-start-column="44" selection-end-line="107" selection-end-column="45" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -98,7 +95,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="319">
@@ -111,19 +108,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js">
+        <entry file="file://$PROJECT_DIR$/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="44">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
@@ -162,7 +165,7 @@
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="88" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="88" />
+              <caret line="7" column="88" selection-start-line="7" selection-end-line="7" selection-end-column="88" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -205,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/ProfileMenu.js" />
         <option value="$PROJECT_DIR$/src/pages/Dashboard/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Dashboard/CustomPC.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Filter.js" />
@@ -225,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/VerticalLayout/index.js" />
-        <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/Filters.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/Products.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/Filters.js" />
@@ -256,6 +257,8 @@
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" />
+        <option value="$PROJECT_DIR$/src/config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -464,12 +467,12 @@
       <option name="presentableId" value="Default" />
       <updated>1608838698618</updated>
       <workItem from="1608838699850" duration="21377000" />
-      <workItem from="1608893564947" duration="99123000" />
+      <workItem from="1608893564947" duration="100157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120500000" />
+    <option name="totallyTimeSpent" value="121534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -480,7 +483,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290398" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -507,16 +510,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Products.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -599,13 +592,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -885,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="88" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="88" />
+          <caret line="7" column="88" selection-start-line="7" selection-end-line="7" selection-end-column="88" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -895,7 +881,7 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2354">
-          <caret line="107" column="45" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="107" selection-end-column="45" />
+          <caret line="107" column="45" selection-start-line="102" selection-start-column="44" selection-end-line="107" selection-end-column="45" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -939,6 +925,20 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="95" column="52" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
         </state>
       </provider>
     </entry>
