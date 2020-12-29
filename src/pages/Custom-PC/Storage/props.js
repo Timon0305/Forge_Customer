@@ -9,7 +9,7 @@ function useViewModel(props) {
     }, []);
 
     const fetchData = async () => {
-        let res = await RestApi.fetchstorage();
+        let res = await RestApi.fetchStorage();
         setProductLength(res['data']['storage'].length);
         setProducts(res['data']['storage'])
     };

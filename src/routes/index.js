@@ -28,7 +28,7 @@ import LockScreen from "../pages/AuthenticationInner/auth-lock-screen";
 
 import Dashboard from "../pages/Dashboard/index";
 
-import CPU from "../pages/Custom-PC/CPU/index";
+import {CPU} from "../pages/Custom-PC/CPU/index";
 import Memory from '../pages/Custom-PC/Memory/index';
 import Motherboard from '../pages/Custom-PC/Motherboard/index';
 import VideoCard from '../pages/Custom-PC/Video-Card/index';

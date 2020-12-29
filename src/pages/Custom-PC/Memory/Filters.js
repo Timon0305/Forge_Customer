@@ -14,18 +14,22 @@ const Filters = (props) => {
 
             <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
                 <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                <div className="custom-control custom-checkbox mt-2">
-                    <Input type="checkbox" value="0" className="custom-control-input font-size-24 " id="productdiscountCheck1" />
-                    <Label className="custom-control-label text-white" htmlFor="productdiscountCheck1">All</Label>
-                </div>
-                <div className="custom-control custom-checkbox mt-2">
-                    <Input type="checkbox" value="1" className="custom-control-input" id="productdiscountCheck2" />
-                    <Label className="custom-control-label text-white" htmlFor="productdiscountCheck2">AMD</Label>
-                </div>
-                <div className="custom-control custom-checkbox mt-2">
-                    <Input type="checkbox" value="2" className="custom-control-input" id="productdiscountCheck3" />
-                    <Label className="custom-control-label text-white" htmlFor="productdiscountCheck3">Intel</Label>
-                </div>
+                {
+                    vm.filter.map((item, index) =>
+                        <div className="custom-control custom-checkbox mt-2" key={index}>
+                            <Input
+                                type="radio"
+                                className="custom-control-input font-size-24"
+                                id={item.id}
+                                name='setDistance'
+                                defaultChecked={item.status}
+                                onChange={() => vm.filterProducts(item.name)}
+                            />
+                            <Label className="custom-control-label text-white" htmlFor={item.id} >{item.name}</Label>
+                        </div>
+                    )
+                }
+
             </div>
             <Cart/>
 
