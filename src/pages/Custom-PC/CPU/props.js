@@ -1,29 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
-function useViewModel(props) {
+function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
-    const [filter, setFilter] = useState([
-        {
-            id: 1,
-            name: 'All',
-            status: true
-        },
-        {
-            id: 2,
-            name: 'AMD',
-            status: false,
-        },
-        {
-            id: 3,
-            name: 'Intel',
-            status: false
-        }
-    ]);
-    const [check, setCheck] = useState(true);
+    const [filter, setFilter] = useState([]);
 
     useEffect(() => {
         fetchData();
+        fetchFilter()
     }, []);
 
     const fetchData = async () => {
@@ -32,9 +16,13 @@ function useViewModel(props) {
         setProducts(res['data']['cpu'])
     };
 
+    const fetchFilter = async () => {
+        let res = await RestApi.fetchCPUFilter();
+        setFilter(res['data']['cpuFilter'])
+    };
+
     const filterProducts = async (value) => {
         let res = await RestApi.filterCPU(value);
-        console.log('filter =>', res['data']['cpu'].length);
         let length = res['data']['cpu'].length;
         setProductLength(length);
         setProducts(res['data']['cpu'])
@@ -43,7 +31,6 @@ function useViewModel(props) {
     return {
         products, setProducts,
         productLength, setProductLength,
-        check, setCheck,
         filter, setFilter,
         filterProducts
     }

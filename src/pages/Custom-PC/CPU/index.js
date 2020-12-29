@@ -5,6 +5,7 @@ import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
 import Cart from "../Cart";
+const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 export const CPU = (props) => {
     const vm = useViewModel(props);
 
@@ -29,7 +30,7 @@ export const CPU = (props) => {
                                                 vm.filter.map((item, index) =>
                                                     <Filters
                                                         key={index}
-                                                        id={item.id}
+                                                        id={item._id}
                                                         status={item.status}
                                                         name={item.name}
                                                         checked={() => vm.filterProducts(item.name)}
@@ -98,11 +99,16 @@ export const Products = ({products, productLength}) => {
                                 <CardBody>
                                     <Link to={"/ecommerce-product-detail/" + product.id} className="text-dark">
                                         <div className="product-img position-relative">
-                                            <img src={product.image} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
+                                            {
+                                                product['image'] === '/static/forever/img/no-image.png' ?
+                                                    <img src={noImage} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
+                                                    :
+                                                    <img src={product['image']} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
+                                            }
                                         </div>
                                         <div className="mt-4 text-center">
                                             <h5 className="mb-3 text-truncate">
-                                                {product.name}
+                                                {product['name']}
                                             </h5>
                                             <div className="text-muted mb-1">
                                                 {'Core Count : ' + product['coreCount']}

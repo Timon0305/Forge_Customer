@@ -29,14 +29,14 @@ import LockScreen from "../pages/AuthenticationInner/auth-lock-screen";
 import Dashboard from "../pages/Dashboard/index";
 
 import {CPU} from "../pages/Custom-PC/CPU/index";
-import Memory from '../pages/Custom-PC/Memory/index';
-import Motherboard from '../pages/Custom-PC/Motherboard/index';
-import VideoCard from '../pages/Custom-PC/Video-Card/index';
-import PowerSupply from '../pages/Custom-PC/Power-Supply/index';
-import CPUCooler from '../pages/Custom-PC/CPU-Cooler/index';
-import Case from '../pages/Custom-PC/Case/index';
-import Storage from '../pages/Custom-PC/Storage/index';
-import Software from '../pages/Custom-PC/Operating-Software/index';
+import {Memory} from '../pages/Custom-PC/Memory/index';
+import {Motherboard} from '../pages/Custom-PC/Motherboard/index';
+import {VideoCard} from '../pages/Custom-PC/Video-Card/index';
+import {PowerSupply} from '../pages/Custom-PC/Power-Supply/index';
+import {CPUCooler} from '../pages/Custom-PC/CPU-Cooler/index';
+import {Case} from '../pages/Custom-PC/Case/index';
+import {Storage} from '../pages/Custom-PC/Storage/index';
+import {Software} from '../pages/Custom-PC/Operating-Software/index';
 
 const publicRoutes = [
 

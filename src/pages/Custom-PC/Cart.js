@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Card, CardBody, Table} from "reactstrap";
+import './custom.scss'
 
 const Cart = () => {
     return (
