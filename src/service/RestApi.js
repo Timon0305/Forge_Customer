@@ -85,7 +85,7 @@ const getWaterCooled = async () => {
     return api.get('/filter/water-cooled')
 };
 
-const getFanless = async () => {
+const getFanLess = async () => {
     return api.get('/filter/fanless')
 };
 
@@ -93,8 +93,12 @@ const fetchCPUCoolerFilter = async () => {
     return api.get('/filter/cpu-cooler')
 };
 
-const filterCPUCooler = async (value) => {
-    return api.post('/category/cpu-cooler', {filter: value})
+const filterCPUCooler = async (manufacturer, cooled, fanLess) => {
+    return api.post('/category/cpu-cooler', {
+        manufacturer: manufacturer,
+        cooled: cooled,
+        fanLess: fanLess
+    })
 };
 
 const fetchCase = async () => {
@@ -148,7 +152,7 @@ export default {
     fetchCPUCooler,
     getWaterCooled,
     fetchCPUCoolerFilter,
-    getFanless,
+    getFanLess,
     filterCPUCooler,
     fetchCase,
     fetchCaseFilter,

@@ -5,13 +5,16 @@ function useViewModel() {
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
     const [waterCooled, setWaterCooled] = useState([]);
-    const [fanless, setFanless] = useState([]);
+    const [fanLess, setFanLess] = useState([]);
+    const [sManufacturer, setSManufacturer] = useState('All');
+    const [sCooled, setSCooled] = useState('All');
+    const [sFanLess, setSFanLess] = useState('All');
 
     useEffect(() => {
         fetchData();
         getManufacturer();
         getWaterCooled();
-        getFanless();
+        getFanLess();
     }, []);
 
     const fetchData = async () => {
@@ -30,14 +33,31 @@ function useViewModel() {
         setWaterCooled(res['data']['waterCooled'])
     };
 
-    const getFanless = async () => {
-        let res = await RestApi.getFanless();
-        setFanless(res['data']['fanless'])
+    const getFanLess = async () => {
+        let res = await RestApi.getFanLess();
+        setFanLess(res['data']['fanLess'])
     };
 
-    const filterProducts = async (value) => {
-        let res = await RestApi.filterCPUCooler(value);
+    const filterManufacturer = async (value) => {
+        let res = await RestApi.filterCPUCooler(value, sCooled, sFanLess);
         let length = res['data']['cooler'].length;
+        setSManufacturer(value);
+        setProductLength(length);
+        setProducts(res['data']['cooler'])
+    };
+
+    const filterWaterCooled = async (value) => {
+        let res = await RestApi.filterCPUCooler(sManufacturer, value, sFanLess);
+        let length = res['data']['cooler'].length;
+        setSCooled(value);
+        setProductLength(length);
+        setProducts(res['data']['cooler'])
+    };
+
+    const filterFanLess = async (value) => {
+        let res = await RestApi.filterCPUCooler(sManufacturer, sCooled, value);
+        let length = res['data']['cooler'].length;
+        setSFanLess(value);
         setProductLength(length);
         setProducts(res['data']['cooler'])
     };
@@ -47,8 +67,13 @@ function useViewModel() {
         productLength, setProductLength,
         manufacturer, setManufacturer,
         waterCooled, setWaterCooled,
-        fanless, setFanless,
-        filterProducts
+        fanLess, setFanLess,
+        sManufacturer, setSManufacturer,
+        sCooled, setSCooled,
+        sFanLess, setSFanLess,
+        filterManufacturer,
+        filterWaterCooled,
+        filterFanLess,
     }
 }
 

@@ -36,7 +36,7 @@ export const CPUCooler = (props) => {
                                                             id={item._id}
                                                             status={item.status}
                                                             name={item.name}
-                                                            checked={() => vm.filterProducts(item.name)}
+                                                            checked={() => vm.filterManufacturer(item.name)}
                                                         />
                                                     )
                                                 }
@@ -51,7 +51,7 @@ export const CPUCooler = (props) => {
                                                             id={item._id}
                                                             status={item.status}
                                                             name={item.name}
-                                                            checked={() => vm.filterProducts(item.name)}
+                                                            checked={() => vm.filterWaterCooled(item.name)}
                                                         />
                                                     )
                                                 }
@@ -60,13 +60,13 @@ export const CPUCooler = (props) => {
                                             <div>
                                                 <h5 className='text-white mt-3'>FanLess</h5>
                                                 {
-                                                    vm.fanless.map((item, index) =>
+                                                    vm.fanLess.map((item, index) =>
                                                         <FanLess
                                                             key={index}
                                                             id={item._id}
                                                             status={item.status}
                                                             name={item.name}
-                                                            checked={() => vm.filterProducts(item.name)}
+                                                            checked={() => vm.filterFanLess(item.name)}
                                                         />
                                                     )
                                                 }
