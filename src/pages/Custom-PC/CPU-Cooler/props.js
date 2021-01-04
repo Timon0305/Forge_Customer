@@ -3,11 +3,15 @@ import RestApi from "../../../service/RestApi";
 function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
-    const [filter, setFilter] = useState([]);
+    const [manufacturer, setManufacturer] = useState([]);
+    const [waterCooled, setWaterCooled] = useState([]);
+    const [fanless, setFanless] = useState([]);
 
     useEffect(() => {
         fetchData();
-        fetchFilter();
+        getManufacturer();
+        getWaterCooled();
+        getFanless();
     }, []);
 
     const fetchData = async () => {
@@ -16,9 +20,19 @@ function useViewModel() {
         setProducts(res['data']['cooler'])
     };
 
-    const fetchFilter = async () => {
+    const getManufacturer = async () => {
         let res = await RestApi.fetchCPUCoolerFilter();
-        setFilter(res['data']['coolerFilter'])
+        setManufacturer(res['data']['coolerFilter'])
+    };
+
+    const getWaterCooled = async () => {
+        let res = await RestApi.getWaterCooled();
+        setWaterCooled(res['data']['waterCooled'])
+    };
+
+    const getFanless = async () => {
+        let res = await RestApi.getFanless();
+        setFanless(res['data']['fanless'])
     };
 
     const filterProducts = async (value) => {
@@ -31,7 +45,9 @@ function useViewModel() {
     return {
         products, setProducts,
         productLength, setProductLength,
-        filter, setFilter,
+        manufacturer, setManufacturer,
+        waterCooled, setWaterCooled,
+        fanless, setFanless,
         filterProducts
     }
 }

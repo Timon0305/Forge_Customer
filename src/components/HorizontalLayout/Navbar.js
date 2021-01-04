@@ -71,7 +71,7 @@ class Navbar extends Component {
 
                                     <li className="nav-item dropdown">
                                         <Link to="/#" onClick={e => { e.preventDefault(); this.setState({ appState: !this.state.appState }); }} className="nav-link dropdown-toggle arrow-none"  >
-                                            <i className="bx bx-customize mr-2"/>CUSTOM PC <div className="arrow-down"/>
+                                            <i className="bx bx-customize mr-2"/>Forge your PC <div className="arrow-down"/>
                                         </Link>
                                         <div className={classname("dropdown-menu", { show: this.state.appState })} >
                                             <Link to="/products/cpu" className="dropdown-item">CPU's</Link>
@@ -93,7 +93,7 @@ class Navbar extends Component {
                                                 e.preventDefault();
                                                 this.setState({ componentState: !this.state.componentState });
                                             }}>
-                                            <i className="bx bx-collection mr-2"></i>{this.props.t('Components')} <div className="arrow-down"></div>
+                                            <i className="bx bx-collection mr-2"/>Partner PC <div className="arrow-down"/>
                                         </Link>
                                         <div className={classname("dropdown-menu", { show: this.state.componentState })}>
                                             <div className="dropdown">
@@ -102,7 +102,7 @@ class Navbar extends Component {
                                                         e.preventDefault();
                                                         this.setState({ formState: !this.state.formState });
                                                     }}>
-                                                   {this.props.t('Forms')}  <div className="arrow-down"></div>
+                                                   {this.props.t('Forms')}  <div className="arrow-down"/>
                                                 </Link>
                                                 <div className={classname("dropdown-menu", { show: this.state.formState })}>
                                                     <Link to="form-elements" className="dropdown-item">{this.props.t('Form Elements')}</Link>
@@ -122,7 +122,7 @@ class Navbar extends Component {
                                                         e.preventDefault();
                                                         this.setState({ tableState: !this.state.tableState });
                                                     }}>
-                                                    {this.props.t('Tables')} <div className="arrow-down"></div>
+                                                    {this.props.t('Tables')} <div className="arrow-down"/>
                                                 </Link>
                                                 <div className={classname("dropdown-menu", { show: this.state.tableState })}>
                                                     <Link to="tables-basic" className="dropdown-item">{this.props.t('Basic Tables')}</Link>
@@ -186,7 +186,7 @@ class Navbar extends Component {
                                                 e.preventDefault();
                                                 this.setState({ extraState: !this.state.extraState });
                                             }}>
-                                            <i className="bx bx-file mr-2"></i>{this.props.t('Extra pages')}  <div className="arrow-down"></div>
+                                            <i className="bx bx-file mr-2"/>Forged PCs <div className="arrow-down"/>
                                         </Link>
                                         <div className={classname("dropdown-menu", { show: this.state.extraState })}>
                                             <div className="dropdown">
@@ -195,7 +195,7 @@ class Navbar extends Component {
                                                         e.preventDefault();
                                                         this.setState({ invoiceState: !this.state.invoiceState });
                                                     }}>
-                                                   {this.props.t('Invoices')} <div className="arrow-down"></div>
+                                                   {this.props.t('Invoices')} <div className="arrow-down"/>
                                                 </Link>
                                                 <div className={classname("dropdown-menu", { show: this.state.invoiceState })}>
                                                     <Link to="invoices-list" className="dropdown-item">{this.props.t('Invoice List')}</Link>

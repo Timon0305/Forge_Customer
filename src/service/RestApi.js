@@ -10,12 +10,23 @@ const fetchCPU = async () => {
     return api.get('/category/cpu')
 };
 
-const fetchCPUFilter = async () => {
+const fetchCPUManufacturer = async () => {
     return api.get('/filter/cpu')
 };
 
-const filterCPU = async (value) => {
-    return api.post('/category/cpu', {filter: value})
+const getGraphics = async () => {
+    return api.get('/filter/cpuGraphics')
+};
+
+const filterCPU = async (manufacturer, fCount, tCount, fClock, tClock, graphics) => {
+    return api.post('/category/cpu', {
+        manufacturer: manufacturer,
+        fCount: fCount,
+        tCount: tCount,
+        fClock: fClock,
+        tClock: tClock,
+        graphics: graphics
+    })
 };
 
 const fetchMemory = async () => {
@@ -70,6 +81,14 @@ const fetchCPUCooler = async () => {
     return api.get('/category/cpu-cooler')
 };
 
+const getWaterCooled = async () => {
+    return api.get('/filter/water-cooled')
+};
+
+const getFanless = async () => {
+    return api.get('/filter/fanless')
+};
+
 const fetchCPUCoolerFilter = async () => {
     return api.get('/filter/cpu-cooler')
 };
@@ -111,8 +130,9 @@ const filterSoftware = async (value) => {
 };
 export default {
     fetchCPU,
-    fetchCPUFilter,
+    fetchCPUManufacturer,
     filterCPU,
+    getGraphics,
     fetchMemory,
     fetchMemoryFilter,
     filterMemory,
@@ -126,7 +146,9 @@ export default {
     fetchPowerSupplyFilter,
     filterPowerSupply,
     fetchCPUCooler,
+    getWaterCooled,
     fetchCPUCoolerFilter,
+    getFanless,
     filterCPUCooler,
     fetchCase,
     fetchCaseFilter,

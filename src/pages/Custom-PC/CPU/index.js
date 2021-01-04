@@ -1,11 +1,13 @@
 import React from 'react';
 import {Button, CardBody, Container, Row, Col, Card, Input, Label} from "reactstrap";
-import {Link} from "react-router-dom";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
 import Cart from "../Cart";
+import Nouislider from "nouislider-react";
+import '../custom.scss';
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
+
 export const CPU = (props) => {
     const vm = useViewModel(props);
 
@@ -23,25 +25,69 @@ export const CPU = (props) => {
                             <Card className={classes.customerCardBackground}>
                                 <Row>
                                     <Col lg={1}/>
-                                    <Col lg={3}>
-                                        <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
-                                            <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                                            {
-                                                vm.filter.map((item, index) =>
-                                                    <Filters
-                                                        key={index}
-                                                        id={item._id}
-                                                        status={item.status}
-                                                        name={item.name}
-                                                        checked={() => vm.filterProducts(item.name)}
-                                                    />
-                                                )
-                                            }
+                                    <Col lg={2} className='m-5'>
+                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                            <h3 className="text-white mb-3">Filters</h3>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>MANUFACTURER</h5>
+                                                {
+                                                    vm.manufacturer.map((item, index) =>
+                                                        <Manufacturer
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterManufacturer(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>CORE COUNT</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 1, max: 64 }}
+                                                    tooltips={true} start={[1, 64]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterCount(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>CORE CLOCK</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 1.1, max: 4.7 }}
+                                                    tooltips={true} start={[1.1, 4.7]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterClock(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Integrated Graphics</h5>
+                                                {
+                                                    vm.graphics.map((item, index) =>
+                                                        <Graphics
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterGraphics(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
                                             <Cart/>
                                         </div>
 
                                     </Col>
-                                    <Col lg={7}>
+                                    <Col lg={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -58,7 +104,7 @@ export const CPU = (props) => {
     )
 };
 
-export const Filters = ({id, name, status, checked}) => {
+export const Manufacturer = ({id, name, status, checked}) => {
     return (
         <React.Fragment>
             <div className="custom-control custom-checkbox mt-2">
@@ -66,7 +112,26 @@ export const Filters = ({id, name, status, checked}) => {
                     type="radio"
                     className="custom-control-input font-size-24"
                     id={id}
-                    name='setDistance'
+                    name='manufacturer'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Graphics = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='graphics'
                     defaultChecked={status}
                     onChange={checked}
                 />
@@ -97,7 +162,6 @@ export const Products = ({products, productLength}) => {
                         <Col xl="4" sm="6" key={"_col_" + key}>
                             <Card style={styles.cardBorder}>
                                 <CardBody>
-                                    <Link to={"/ecommerce-product-detail/" + product.id} className="text-dark">
                                         <div className="product-img position-relative">
                                             {
                                                 product['image'] === '/static/forever/img/no-image.png' ?
@@ -138,7 +202,6 @@ export const Products = ({products, productLength}) => {
                                                 }
                                             </h5>
                                         </div>
-                                    </Link>
                                     <Button className='mt-2 btn btn-block btn-sm btn-success'>Add</Button>
                                 </CardBody>
                             </Card>

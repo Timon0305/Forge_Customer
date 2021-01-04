@@ -13,3 +13,28 @@
 .cartButton {
   border: 3px solid white!important;
 }
+.noUi-horizontal {
+  height: 7px!important;
+}
+.noUi-horizontal .noUi-handle {
+  width: 23px!important;
+  height: 15px!important;
+  right: -17px;
+  top: -6px;
+}
+.noUi-handle:before, .noUi-handle:after {
+  content: "";
+  display: none!important;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+.noUi-connect {
+  background: #891bdc!important;
+}
+hr {
+  border: 1px solid!important;
+}
