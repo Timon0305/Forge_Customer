@@ -4,7 +4,7 @@ function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
-    const [type, setType] = useState([]);
+    const [types, setTypes] = useState([]);
     const [factor, setFactor] = useState([]);
     const [fPrice, setFPrice] = useState('0');
     const [tPrice, setTPrice] = useState('6399');
@@ -36,7 +36,7 @@ function useViewModel() {
 
     const getType = async () => {
         let res = await RestApi.getStorageType();
-        setType(res['data']['type']);
+        setTypes(res['data']['type']);
     };
 
     const getFactor = async () => {
@@ -66,7 +66,7 @@ function useViewModel() {
     };
 
     const filterType = async (value) => {
-        let res = RestApi.filterStorage(sManufacturer, fPrice, tPrice, fCapacity, tCapacity, value, fCache, tCache, sFactor);
+        let res = await RestApi.filterStorage(sManufacturer, fPrice, tPrice, fCapacity, tCapacity, value, fCache, tCache, sFactor);
         setProductLength(res['data']['storage'].length);
         setSType(value);
         setProducts(res['data']['storage']);
@@ -80,7 +80,7 @@ function useViewModel() {
     };
 
     const filterFactor = async (value) => {
-        let res = RestApi.filterStorage(sManufacturer, fPrice, tPrice, fCapacity, tCapacity, sType, fCache, tCache, value);
+        let res = await RestApi.filterStorage(sManufacturer, fPrice, tPrice, fCapacity, tCapacity, sType, fCache, tCache, value);
         setProductLength(res['data']['storage'].length);
         setSFactor(value);
         setProducts(res['data']['storage']);
@@ -90,7 +90,7 @@ function useViewModel() {
         products, setProducts,
         productLength, setProductLength,
         manufacturer, setManufacturer,
-        type, setType,
+        types, setTypes,
         factor, setFactor,
         fPrice, setFPrice,
         tPrice, setTPrice,

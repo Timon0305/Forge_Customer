@@ -71,7 +71,7 @@ export const Storage = (props) => {
                                             <div>
                                                 <h5 className='text-white mt-3'>Type</h5>
                                                 {
-                                                    vm.type.map((item, index) =>
+                                                    vm.types.map((item, index) =>
                                                         <Type
                                                             key={index}
                                                             id={item._id}
