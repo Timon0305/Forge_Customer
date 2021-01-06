@@ -154,12 +154,30 @@ const fetchStorage = async () => {
     return api.get('/category/storage')
 };
 
-const fetchStorageFilter = async () => {
+const getStorageManufacturer = async () => {
     return api.get('/filter/storage')
 };
 
-const filterStorage = async (value) => {
-    return api.post('/category/storage', {filter: value})
+const getStorageType = async () => {
+    return api.get('/filter/storageType')
+};
+
+const getStorageFactor = async () => {
+    return api.get('/filter/storageFactor')
+};
+
+const filterStorage = async (manufacturer, fPrice, tPrice, fCapacity, tCapacity, type, fCache, tCache, factor) => {
+    return api.post('/category/storage', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        fCapacity: fCapacity,
+        tCapacity: tCapacity,
+        type: type,
+        fCache: fCache,
+        tCache: tCache,
+        factor: factor
+    })
 };
 
 const fetchSoftware = async () => {
@@ -200,7 +218,9 @@ export default {
     fetchCaseFilter,
     filterCase,
     fetchStorage,
-    fetchStorageFilter,
+    getStorageManufacturer,
+    getStorageType,
+    getStorageFactor,
     filterStorage,
     fetchSoftware,
     filterSoftware
