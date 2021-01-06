@@ -5,6 +5,7 @@ import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import Cart from "../Cart";
 import useViewModel from "./props";
+import Nouislider from "nouislider-react";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const VideoCard = (props) => {
@@ -23,25 +24,71 @@ export const VideoCard = (props) => {
                             <Card className={classes.customerCardBackground}>
                                 <Row>
                                     <Col lg={1}/>
-                                    <Col lg={3}>
-                                        <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
-                                            <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                                            {
-                                                vm.filter.map((item, index) =>
-                                                    <Filters
-                                                        key={index}
-                                                        id={item.id}
-                                                        status={item.status}
-                                                        name={item.name}
-                                                        checked={() => vm.filterProducts(item.name)}
-                                                    />
-                                                )
-                                            }
+                                    <Col lg={2} className='m-5'>
+                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                            <h3 className="text-white mb-3">Filters</h3>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>MANUFACTURER</h5>
+                                                {
+                                                    vm.manufacturer.map((item, index) =>
+                                                        <Manufacturer
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterManufacturer(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Price</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 0, max: 10560 }}
+                                                    tooltips={true} start={[0, 10560]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterPrice(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>ChipSet</h5>
+                                                {
+                                                    vm.chipSet.map((item, index) =>
+                                                        <ChipSet
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterChipSet(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Color</h5>
+                                                {
+                                                    vm.color.map((item, index) =>
+                                                        <Color
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterColor(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
                                             <Cart/>
                                         </div>
-
                                     </Col>
-                                    <Col lg={7}>
+                                    <Col lg={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -58,7 +105,7 @@ export const VideoCard = (props) => {
     )
 };
 
-export const Filters = ({id, name, status, checked}) => {
+export const Manufacturer = ({id, name, status, checked}) => {
     return (
         <React.Fragment>
             <div className="custom-control custom-checkbox mt-2">
@@ -66,7 +113,45 @@ export const Filters = ({id, name, status, checked}) => {
                     type="radio"
                     className="custom-control-input font-size-24"
                     id={id}
-                    name='setDistance'
+                    name='manufacturer'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const ChipSet = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='chipSet'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Color = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='color'
                     defaultChecked={status}
                     onChange={checked}
                 />
@@ -83,7 +168,7 @@ export const Products = ({products, productLength}) => {
             <Row>
                 <Col xs={12}>
                     <h2 className='text-white text-center pt-4'>
-                        Choose A CPU
+                        Choose A Video Card
                     </h2>
                     <div className='pl-3 text-white text-left font-size-20'>
                         {productLength + ' Compatible Products'}

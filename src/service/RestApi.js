@@ -7,19 +7,19 @@ const api = create({
 });
 
 const fetchCPU = async () => {
-    return api.get('/category/cpu')
+    return await api.get('/category/cpu')
 };
 
 const getCPUManufacturer = async () => {
-    return api.get('/filter/cpu')
+    return await api.get('/filter/cpu')
 };
 
 const getGraphics = async () => {
-    return api.get('/filter/cpuGraphics')
+    return await api.get('/filter/cpuGraphics')
 };
 
 const filterCPU = async (manufacturer, fCount, tCount, fClock, tClock, graphics) => {
-    return api.post('/category/cpu', {
+    return await api.post('/category/cpu', {
         manufacturer: manufacturer,
         fCount: fCount,
         tCount: tCount,
@@ -30,23 +30,23 @@ const filterCPU = async (manufacturer, fCount, tCount, fClock, tClock, graphics)
 };
 
 const fetchMemory = async () => {
-    return api.get('/category/memory')
+    return await api.get('/category/memory')
 };
 
 const getMemoryManufacturer = async () => {
-    return api.get('/filter/memory')
+    return await api.get('/filter/memory')
 };
 
 const getMemoryModule = async () => {
-    return api.get('/filter/memoryModule')
+    return await api.get('/filter/memoryModule')
 };
 
 const getMemoryColor = async () => {
-    return api.get('/filter/memoryColor')
+    return await api.get('/filter/memoryColor')
 };
 
 const filterMemory = async (manufacturer, fPrice, tPrice, module, color, fSpeed, tSpeed) => {
-    return api.post('/category/memory', {
+    return await api.post('/category/memory', {
         manufacturer: manufacturer,
         fPrice: fPrice,
         tPrice: tPrice,
@@ -58,27 +58,27 @@ const filterMemory = async (manufacturer, fPrice, tPrice, module, color, fSpeed,
 };
 
 const fetchMotherboard = async () => {
-    return api.get('/category/motherboard')
+    return await api.get('/category/motherboard')
 };
 
 const getMotherboardManufacturer = async () => {
-    return api.get('/filter/motherboard')
+    return await api.get('/filter/motherboard')
 };
 
 const getMotherboardSocket = async () => {
-    return api.get('/filter/motherboardSocket')
+    return await api.get('/filter/motherboardSocket')
 };
 
 const getMotherboardFactor = async () => {
-    return api.get('/filter/motherboardFactor')
+    return await api.get('/filter/motherboardFactor')
 };
 
 const getMotherboardColor = async () => {
-    return api.get('/filter/motherboardColor')
+    return await api.get('/filter/motherboardColor')
 };
 
 const filterMotherboard = async (manufacturer, fPrice, tPrice, socket, factor, fMemoryMax, tMemoryMax, color) => {
-    return api.post('/category/motherboard', {
+    return await api.post('/category/motherboard', {
         manufacturer: manufacturer,
         fPrice: fPrice,
         tPrice: tPrice,
@@ -91,43 +91,51 @@ const filterMotherboard = async (manufacturer, fPrice, tPrice, socket, factor, f
 };
 
 const fetchVideoCard = async () => {
-    return api.get('/category/video-card')
+    return await api.get('/category/video-card')
 };
 
-const fetchVideoCardFilter = async () => {
-    return api.get('/filter/video-card')
+const fetchVideoCardManufacturer = async () => {
+    return await api.get('/filter/videoCardManufacturer')
+};
+
+const fetchVideoCardChipSet = async () => {
+    return await api.get('filter/videoCardChipSet')
+};
+
+const fetchVideoCardColor = async () => {
+    return await api.get('filter/videoCardColor')
 };
 
 const filterVideoCard = async (value) => {
-    return api.post('/category/video-card', {filter: value})
+    return await api.post('/category/video-card', {filter: value})
 };
 
 const fetchPowerSupply = async () => {
-    return api.get('/category/power-supply')
+    return await api.get('/category/power-supply')
 };
 
 const fetchPowerSupplyFilter = async () => {
-    return api.get('/filter/power-supply')
+    return await api.get('/filter/power-supply')
 };
 
 const filterPowerSupply = async (value) => {
-    return api.post('/category/power-supply', {filter: value})
+    return await api.post('/category/power-supply', {filter: value})
 };
 
 const fetchCPUCooler = async () => {
-    return api.get('/category/cpu-cooler')
+    return await api.get('/category/cpu-cooler')
 };
 
 const getWaterCooled = async () => {
-    return api.get('/filter/water-cooled')
+    return await api.get('/filter/water-cooled')
 };
 
 const getFanLess = async () => {
-    return api.get('/filter/fanless')
+    return await api.get('/filter/fanless')
 };
 
 const fetchCPUCoolerFilter = async () => {
-    return api.get('/filter/cpu-cooler')
+    return await api.get('/filter/cpu-cooler')
 };
 
 const filterCPUCooler = async (manufacturer, cooled, fanLess) => {
@@ -139,35 +147,35 @@ const filterCPUCooler = async (manufacturer, cooled, fanLess) => {
 };
 
 const fetchCase = async () => {
-    return api.get('/category/case')
+    return await api.get('/category/case')
 };
 
 const fetchCaseFilter = async () => {
-    return api.get('/filter/case')
+    return await api.get('/filter/case')
 };
 
 const filterCase = async (value) => {
-    return api.post('/category/case', {filter: value})
+    return await api.post('/category/case', {filter: value})
 };
 
 const fetchStorage = async () => {
-    return api.get('/category/storage')
+    return await api.get('/category/storage')
 };
 
 const getStorageManufacturer = async () => {
-    return api.get('/filter/storage')
+    return await api.get('/filter/storage')
 };
 
 const getStorageType = async () => {
-    return api.get('/filter/storageType')
+    return await api.get('/filter/storageType')
 };
 
 const getStorageFactor = async () => {
-    return api.get('/filter/storageFactor')
+    return await api.get('/filter/storageFactor')
 };
 
 const filterStorage = async (manufacturer, fPrice, tPrice, fCapacity, tCapacity, type, fCache, tCache, factor) => {
-    return api.post('/category/storage', {
+    return await api.post('/category/storage', {
         manufacturer: manufacturer,
         fPrice: fPrice,
         tPrice: tPrice,
@@ -181,11 +189,11 @@ const filterStorage = async (manufacturer, fPrice, tPrice, fCapacity, tCapacity,
 };
 
 const fetchSoftware = async () => {
-    return api.get('/category/software')
+    return await api.get('/category/software')
 };
 
 const filterSoftware = async (value) => {
-    return api.post('/category/software', {filter: value})
+    return await api.post('/category/software', {filter: value})
 };
 export default {
     fetchCPU,
@@ -204,7 +212,9 @@ export default {
     getMotherboardColor,
     filterMotherboard,
     fetchVideoCard,
-    fetchVideoCardFilter,
+    fetchVideoCardManufacturer,
+    fetchVideoCardChipSet,
+    fetchVideoCardColor,
     filterVideoCard,
     fetchPowerSupply,
     fetchPowerSupplyFilter,

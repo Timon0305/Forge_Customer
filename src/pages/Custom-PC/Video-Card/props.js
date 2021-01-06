@@ -3,11 +3,20 @@ import RestApi from "../../../service/RestApi";
 function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
-    const [filter, setFilter] = useState([]);
+    const [manufacturer, setManufacturer] = useState([]);
+    const [chipSet, setChipSet] = useState([]);
+    const [color, setColor] = useState([]);
+    const [sManufacturer, setSManufacturer] = useState('All');
+    const [fPrice, setFPrice] = useState('0');
+    const [tPrice, setTPrice] = useState('10560');
+    const [sChipSet, setSChipSet] = useState('All');
+    const [sColor, setSColor] = useState('All');
 
     useEffect(() => {
         fetchData();
-        fetchFilter();
+        getManufacturer();
+        getChipSet();
+        getColor();
     }, []);
 
     const fetchData = async () => {
@@ -16,9 +25,19 @@ function useViewModel() {
         setProducts(res['data']['video']);
     };
 
-    const fetchFilter = async () => {
-        let res = await RestApi.fetchVideoCardFilter();
-        setFilter(res['data']['videoFilter'])
+    const getManufacturer = async () => {
+        let res = await RestApi.fetchVideoCardManufacturer();
+        setManufacturer(res['data']['manufacturer'])
+    };
+
+    const getChipSet = async () => {
+        let res = await RestApi.fetchVideoCardChipSet();
+        setChipSet(res['data']['chipSet']);
+    };
+
+    const getColor = async () => {
+        let res = await RestApi.fetchVideoCardColor();
+        setColor(res['data']['color'])
     };
 
     const filterProducts = async (value) => {
@@ -30,7 +49,14 @@ function useViewModel() {
     return {
         products, setProducts,
         productLength, setProductLength,
-        filter, setFilter,
+        manufacturer, setManufacturer,
+        chipSet, setChipSet,
+        color, setColor,
+        sManufacturer, setSManufacturer,
+        fPrice, setFPrice,
+        tPrice, setTPrice,
+        sChipSet, setSChipSet,
+        sColor, setSColor,
         filterProducts
     }
 }
