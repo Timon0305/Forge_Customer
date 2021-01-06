@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
 function useViewModel(props) {
     const [products, setProducts] = useState([]);

@@ -10,7 +10,7 @@ const fetchCPU = async () => {
     return api.get('/category/cpu')
 };
 
-const fetchCPUManufacturer = async () => {
+const getCPUManufacturer = async () => {
     return api.get('/filter/cpu')
 };
 
@@ -33,24 +33,61 @@ const fetchMemory = async () => {
     return api.get('/category/memory')
 };
 
-const fetchMemoryFilter = async () => {
+const getMemoryManufacturer = async () => {
     return api.get('/filter/memory')
 };
 
-const filterMemory = async (value) => {
-    return api.post('/category/memory', {filter: value})
+const getMemoryModule = async () => {
+    return api.get('/filter/memoryModule')
+};
+
+const getMemoryColor = async () => {
+    return api.get('/filter/memoryColor')
+};
+
+const filterMemory = async (manufacturer, fPrice, tPrice, module, color, fSpeed, tSpeed) => {
+    return api.post('/category/memory', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        module: module,
+        color: color,
+        fSpeed: fSpeed,
+        tSpeed: tSpeed
+    })
 };
 
 const fetchMotherboard = async () => {
     return api.get('/category/motherboard')
 };
 
-const fetchMotherboardFilter = async () => {
+const getMotherboardManufacturer = async () => {
     return api.get('/filter/motherboard')
 };
 
-const filterMotherboard = async (value) => {
-    return api.post('/category/motherboard', {filter: value})
+const getMotherboardSocket = async () => {
+    return api.get('/filter/motherboardSocket')
+};
+
+const getMotherboardFactor = async () => {
+    return api.get('/filter/motherboardFactor')
+};
+
+const getMotherboardColor = async () => {
+    return api.get('/filter/motherboardColor')
+};
+
+const filterMotherboard = async (manufacturer, fPrice, tPrice, socket, factor, fMemoryMax, tMemoryMax, color) => {
+    return api.post('/category/motherboard', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        socket: socket,
+        factor: factor,
+        fMemoryMax: fMemoryMax,
+        tMemoryMax: tMemoryMax,
+        color: color,
+    })
 };
 
 const fetchVideoCard = async () => {
@@ -134,14 +171,19 @@ const filterSoftware = async (value) => {
 };
 export default {
     fetchCPU,
-    fetchCPUManufacturer,
-    filterCPU,
+    getCPUManufacturer,
     getGraphics,
+    filterCPU,
     fetchMemory,
-    fetchMemoryFilter,
+    getMemoryManufacturer,
+    getMemoryModule,
+    getMemoryColor,
     filterMemory,
     fetchMotherboard,
-    fetchMotherboardFilter,
+    getMotherboardManufacturer,
+    getMotherboardSocket,
+    getMotherboardFactor,
+    getMotherboardColor,
     filterMotherboard,
     fetchVideoCard,
     fetchVideoCardFilter,

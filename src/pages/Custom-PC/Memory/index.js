@@ -5,6 +5,7 @@ import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import Cart from "../Cart";
 import useViewModel from "./props";
+import Nouislider from "nouislider-react";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Memory = (props) => {
@@ -23,25 +24,83 @@ export const Memory = (props) => {
                             <Card className={classes.customerCardBackground}>
                                 <Row>
                                     <Col lg={1}/>
-                                    <Col lg={3}>
-                                        <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
-                                            <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                                            {
-                                                vm.filter.map((item, index) =>
-                                                    <Filters
-                                                        key={index}
-                                                        id={item.id}
-                                                        status={item.status}
-                                                        name={item.name}
-                                                        checked={() => vm.filterProducts(item.name)}
-                                                    />
-                                                )
-                                            }
+                                    <Col lg={2} className='m-5'>
+                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                            <h3 className="text-white mb-3">Filters</h3>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>MANUFACTURER</h5>
+                                                {
+                                                    vm.manufacturer.map((item, index) =>
+                                                        <Manufacturer
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterManufacturer(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Price</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 0, max: 2812 }}
+                                                    tooltips={true} start={[0, 2812]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterPrice(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Modules</h5>
+                                                {
+                                                    vm.module.map((item, index) =>
+                                                        <Module
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterModule(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Color</h5>
+                                                {
+                                                    vm.color.map((item, index) =>
+                                                        <Color
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterColor(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Speed</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 333, max: 5100 }}
+                                                    tooltips={true} start={[333, 5100]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterSpeed(data)}
+                                                />
+                                            </div>
+                                            <hr/>
                                             <Cart/>
                                         </div>
-
                                     </Col>
-                                    <Col lg={7}>
+                                    <Col lg={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -58,7 +117,7 @@ export const Memory = (props) => {
     )
 };
 
-export const Filters = ({id, name, status, checked}) => {
+export const Manufacturer = ({id, name, status, checked}) => {
     return (
         <React.Fragment>
             <div className="custom-control custom-checkbox mt-2">
@@ -66,7 +125,45 @@ export const Filters = ({id, name, status, checked}) => {
                     type="radio"
                     className="custom-control-input font-size-24"
                     id={id}
-                    name='setDistance'
+                    name='manufacturer'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Module = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='module'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Color = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='color'
                     defaultChecked={status}
                     onChange={checked}
                 />

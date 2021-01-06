@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
-function useViewModel(props) {
+function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [filter, setFilter] = useState([]);

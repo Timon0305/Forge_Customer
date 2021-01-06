@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
 function useViewModel() {
     const [products, setProducts] = useState([]);
@@ -25,8 +25,8 @@ function useViewModel() {
     };
 
     const fetchManufacturer = async () => {
-        let res = await RestApi.fetchCPUManufacturer();
-        setManufacturer(res['data']['cpuFilter'])
+        let res = await RestApi.getCPUManufacturer();
+        setManufacturer(res['data']['manufacturer'])
     };
 
     const getGraphics  = async () => {

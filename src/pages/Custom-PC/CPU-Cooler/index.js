@@ -74,7 +74,6 @@ export const CPUCooler = (props) => {
                                             <hr/>
                                             <Cart/>
                                         </div>
-
                                     </Col>
                                     <Col lg={8}>
                                         <Products
