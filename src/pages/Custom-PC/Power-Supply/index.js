@@ -3,7 +3,6 @@ import {Container, Row, Col, Card, Input, Label, CardBody, Button} from "reactst
 import {Link} from "react-router-dom";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
-import Cart from "../Cart";
 import useViewModel from "./props";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
@@ -38,7 +37,6 @@ export const PowerSupply = (props) => {
                                                     />
                                                 )
                                             }
-                                            <Cart/>
                                         </div>
 
                                     </Col>

@@ -26,24 +26,46 @@ function useViewModel() {
     };
 
     const getManufacturer = async () => {
-        let res = await RestApi.fetchVideoCardManufacturer();
+        let res = await RestApi.getVideoCardManufacturer();
         setManufacturer(res['data']['manufacturer'])
     };
 
     const getChipSet = async () => {
-        let res = await RestApi.fetchVideoCardChipSet();
+        let res = await RestApi.getVideoCardChipSet();
         setChipSet(res['data']['chipSet']);
     };
 
     const getColor = async () => {
-        let res = await RestApi.fetchVideoCardColor();
+        let res = await RestApi.getVideoCardColor();
         setColor(res['data']['color'])
     };
 
-    const filterProducts = async (value) => {
-        let res = await RestApi.filterVideoCard(value);
-        setProductLength(res['data']['video'].length);
-        setProducts(res['data']['video'])
+    const filterManufacturer = async (value) => {
+        let res = await RestApi.filterVideoCard(value, fPrice, tPrice, sChipSet, sColor);
+        setSManufacturer(value);
+        setProductLength(res['data']['videoCard'].length);
+        setProducts(res['data']['videoCard'])
+    };
+
+    const filterPrice = async (value) => {
+        let fPrice = value[0];
+        let tPrice = value[1];
+        setFPrice(fPrice);
+        setTPrice(tPrice);
+    };
+
+    const filterChipSet = async (value) => {
+        let res = await RestApi.filterVideoCard(sManufacturer, fPrice, tPrice, value, sColor);
+        setSChipSet(value);
+        setProductLength(res['data']['videoCard'].length);
+        setProducts(res['data']['videoCard'])
+    };
+
+    const filterColor = async (value) => {
+        let res = await RestApi.filterVideoCard(sManufacturer, fPrice, tPrice, sChipSet, value);
+        setSColor(value);
+        setProductLength(res['data']['videoCard'].length);
+        setProducts(res['data']['videoCard'])
     };
 
     return {
@@ -57,7 +79,10 @@ function useViewModel() {
         tPrice, setTPrice,
         sChipSet, setSChipSet,
         sColor, setSColor,
-        filterProducts
+        filterManufacturer,
+        filterPrice,
+        filterChipSet,
+        filterColor
     }
 }
 

@@ -5,7 +5,6 @@ import Nouislider from "nouislider-react";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from './props'
-import Cart from "../Cart";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Motherboard = (props) => {
@@ -114,7 +113,6 @@ export const Motherboard = (props) => {
                                                 }
                                             </div>
                                             <hr/>
-                                            <Cart/>
                                         </div>
                                     </Col>
                                     <Col lg={8}>

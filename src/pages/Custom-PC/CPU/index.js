@@ -3,7 +3,6 @@ import {Button, CardBody, Container, Row, Col, Card, Input, Label} from "reactst
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
-import Cart from "../Cart";
 import Nouislider from "nouislider-react";
 import '../custom.scss';
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
@@ -83,7 +82,6 @@ export const CPU = (props) => {
                                                 }
                                             </div>
                                             <hr/>
-                                            <Cart/>
                                         </div>
 
                                     </Col>

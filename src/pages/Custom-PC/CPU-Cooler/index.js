@@ -4,7 +4,6 @@ import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import {Link} from "react-router-dom";
 import useViewModel from "./props";
-import Cart from "../Cart";
 import '../custom.scss'
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 export const CPUCooler = (props) => {
@@ -72,7 +71,6 @@ export const CPUCooler = (props) => {
                                                 }
                                             </div>
                                             <hr/>
-                                            <Cart/>
                                         </div>
                                     </Col>
                                     <Col lg={8}>

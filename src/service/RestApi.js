@@ -94,20 +94,26 @@ const fetchVideoCard = async () => {
     return await api.get('/category/video-card')
 };
 
-const fetchVideoCardManufacturer = async () => {
+const getVideoCardManufacturer = async () => {
     return await api.get('/filter/videoCardManufacturer')
 };
 
-const fetchVideoCardChipSet = async () => {
+const getVideoCardChipSet = async () => {
     return await api.get('filter/videoCardChipSet')
 };
 
-const fetchVideoCardColor = async () => {
+const getVideoCardColor = async () => {
     return await api.get('filter/videoCardColor')
 };
 
-const filterVideoCard = async (value) => {
-    return await api.post('/category/video-card', {filter: value})
+const filterVideoCard = async (manufacturer, fPrice, tPrice, chipSet, color) => {
+    return await api.post('/category/video-card', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        chipSet: chipSet,
+        color: color
+    })
 };
 
 const fetchPowerSupply = async () => {
@@ -212,9 +218,9 @@ export default {
     getMotherboardColor,
     filterMotherboard,
     fetchVideoCard,
-    fetchVideoCardManufacturer,
-    fetchVideoCardChipSet,
-    fetchVideoCardColor,
+    getVideoCardManufacturer,
+    getVideoCardChipSet,
+    getVideoCardColor,
     filterVideoCard,
     fetchPowerSupply,
     fetchPowerSupplyFilter,

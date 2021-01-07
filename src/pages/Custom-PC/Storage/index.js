@@ -4,7 +4,6 @@ import {Link} from "react-router-dom";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
-import Cart from "../Cart";
 import Nouislider from "nouislider-react";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
@@ -110,7 +109,6 @@ export const Storage = (props) => {
                                                 }
                                             </div>
                                             <hr/>
-                                            <Cart/>
                                         </div>
                                     </Col>
                                     <Col lg={8}>
