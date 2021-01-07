@@ -4,7 +4,6 @@ import { Row, Col, Breadcrumb, BreadcrumbItem } from "reactstrap";
 
 class Breadcrumbs extends Component {
 
-
     render() {
         return (
             <React.Fragment>

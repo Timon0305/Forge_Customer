@@ -70,21 +70,10 @@ class Navbar extends Component {
                                     </li>
 
                                     <li className="nav-item dropdown">
-                                        <Link to="/#" onClick={e => { e.preventDefault(); this.setState({ appState: !this.state.appState }); }} className="nav-link dropdown-toggle arrow-none"  >
-                                            <i className="bx bx-customize mr-2"/>Forge your PC <div className="arrow-down"/>
+                                        <Link to="/products/cpu"
+                                              className="nav-link dropdown-toggle arrow-none"  >
+                                            <i className="bx bx-customize mr-2"/>Forge your PC
                                         </Link>
-                                        <div className={classname("dropdown-menu", { show: this.state.appState })} >
-                                            <Link to="/products/cpu" className="dropdown-item">CPU's</Link>
-                                            <Link to="/products/memory" className="dropdown-item">MEMORY</Link>
-                                            <Link to="/products/motherboard" className="dropdown-item">MOTHERBOARD</Link>
-                                            <Link to="/products/video-card" className="dropdown-item">VIDEO CARD</Link>
-                                            <Link to="/products/power-supply" className="dropdown-item">POWER SUPPLY</Link>
-                                            <Link to="/products/cpu-cooler" className="dropdown-item">CPU COOLER</Link>
-                                            <Link to="/products/case" className="dropdown-item">CASES</Link>
-                                            <Link to="/products/storage" className="dropdown-item">STORAGE</Link>
-                                            <Link to="/products/software" className="dropdown-item">OPERATING SOFTWARE</Link>
-
-                                        </div>
                                     </li>
 
                                     <li className="nav-item dropdown">

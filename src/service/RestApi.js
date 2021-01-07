@@ -122,15 +122,36 @@ const filterVideoCard = async (manufacturer, fPrice, tPrice, chipSet, color) => 
 };
 
 const fetchPowerSupply = async () => {
-    return await api.get('/category/power-supply')
+    return await api.get('/category/powerSupply')
 };
 
-const fetchPowerSupplyFilter = async () => {
-    return await api.get('/filter/power-supply')
+const getPowerSupplyManufacturer = async () => {
+    return await api.get('/filter/powerSupplyManufacturer')
 };
 
-const filterPowerSupply = async (value) => {
-    return await api.post('/category/power-supply', {filter: value})
+const getPowerSupplyEfficiency = async () => {
+    return await api.get('/filter/powerSupplyEfficiency')
+};
+
+const getPowerSupplyModular = async () => {
+    return await api.get('/filter/powerSupplyModular')
+};
+
+const getPowerSupplyColor = async () => {
+    return await api.get('/filter/powerSupplyColor')
+};
+
+const filterPowerSupply = async (manufacturer, fPrice, tPrice, efficiency, fWattage, tWattage, modular, color) => {
+    return await api.post('/category/powerSupply', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        efficiency: efficiency,
+        fWattage: fWattage,
+        tWattage: tWattage,
+        modular: modular,
+        color: color
+    })
 };
 
 const fetchCPUCooler = async () => {
@@ -253,7 +274,10 @@ export default {
     getVideoCardColor,
     filterVideoCard,
     fetchPowerSupply,
-    fetchPowerSupplyFilter,
+    getPowerSupplyManufacturer,
+    getPowerSupplyEfficiency,
+    getPowerSupplyModular,
+    getPowerSupplyColor,
     filterPowerSupply,
     fetchCPUCooler,
     getWaterCooled,

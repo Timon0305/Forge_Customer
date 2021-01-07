@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
+import Nouislider from "nouislider-react";
+import Breadcrumbs from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const PowerSupply = (props) => {
@@ -18,29 +20,114 @@ export const PowerSupply = (props) => {
                             <CustomVideo/>
                         </Col>
                     </Row>
+                    <Row className='container' style={styles.subHeader}>
+                        <Breadcrumbs title="Ecommerce" breadcrumbItem="Product" />
+                    </Row>
                     <Row>
                         <Col xs={12} style={styles.paddingStyle}>
                             <Card className={classes.customerCardBackground}>
                                 <Row>
                                     <Col lg={1}/>
-                                    <Col lg={3}>
-                                        <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
-                                            <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                                            {
-                                                vm.filter.map((item, index) =>
-                                                    <Filters
-                                                        key={index}
-                                                        id={item._id}
-                                                        status={item.status}
-                                                        name={item.name}
-                                                        checked={() => vm.filterProducts(item.name)}
-                                                    />
-                                                )
-                                            }
+                                    <Col lg={2} className='m-5'>
+                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                            <h3 className="text-white mb-3">Filters</h3>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>MANUFACTURER</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.manufacturer.map((item, index) =>
+                                                            <Manufacturer
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterManufacturer(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Price</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 0, max: 1919 }}
+                                                    tooltips={true} start={[0, 1919]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterPrice(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Efficiency Rating</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.efficiency.map((item, index) =>
+                                                            <Efficiency
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterEfficiency(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Wattage</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 180, max: 2000 }}
+                                                    tooltips={true} start={[0, 1919]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterWattage(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Modular</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.modular.map((item, index) =>
+                                                            <Modular
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterModular(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Color</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.color.map((item, index) =>
+                                                            <Color
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterColor(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
                                         </div>
 
                                     </Col>
-                                    <Col lg={7}>
+                                    <Col lg={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -57,7 +144,7 @@ export const PowerSupply = (props) => {
     )
 };
 
-export const Filters = ({id, name, status, checked}) => {
+export const Manufacturer = ({id, name, status, checked}) => {
     return (
         <React.Fragment>
             <div className="custom-control custom-checkbox mt-2">
@@ -65,7 +152,7 @@ export const Filters = ({id, name, status, checked}) => {
                     type="radio"
                     className="custom-control-input font-size-24"
                     id={id}
-                    name='setDistance'
+                    name='manufacturer'
                     defaultChecked={status}
                     onChange={checked}
                 />
@@ -76,13 +163,69 @@ export const Filters = ({id, name, status, checked}) => {
     )
 };
 
+export const Efficiency = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='efficiency'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Modular = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='modular'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Color = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='color'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
 export const Products = ({products, productLength}) => {
     return (
         <React.Fragment>
             <Row>
                 <Col xs={12}>
                     <h2 className='text-white text-center pt-4'>
-                        Choose A CPU
+                        Choose A Power Supply
                     </h2>
                     <div className='pl-3 text-white text-left font-size-20'>
                         {productLength + ' Compatible Products'}
@@ -156,6 +299,9 @@ const styles = {
         paddingLeft: '0px',
         paddingRight: '0px',
         maxHeight: '500px'
+    },
+    subHeader : {
+        margin: 'auto'
     },
     paddingStyle : {
         paddingLeft: '0px',
