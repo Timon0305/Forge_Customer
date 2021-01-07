@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96792bb-1a5d-424a-8180-b19dd94150c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/RestApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/RestApi.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,7 +32,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="268" />
+          <entry key="JavaScript" value="269" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="14" />
           <entry key="TypeScript" value="13" />
@@ -58,7 +49,7 @@
           <entry key="CSS" value="272" />
           <entry key="HTML" value="28" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="30659" />
+          <entry key="JavaScript" value="31121" />
           <entry key="SCSS" value="430" />
         </counts>
       </usages-collector>
@@ -69,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="253">
+              <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -98,15 +89,6 @@
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -156,11 +138,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/RestApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+            <state relative-caret-position="231">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -252,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" />
@@ -262,9 +252,10 @@
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" />
         <option value="$PROJECT_DIR$/src/service/RestApi.js" />
       </list>
     </option>
@@ -335,71 +326,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Case" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
               <item name="CPU" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="CPU-Cooler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Memory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Motherboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Operating-Software" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Power-Supply" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
-              <item name="Video-Card" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="customer" type="b2602c69:ProjectViewProjectNode" />
@@ -489,15 +416,16 @@
       <workItem from="1608838699850" duration="21377000" />
       <workItem from="1608893564947" duration="115043000" />
       <workItem from="1609404256299" duration="599000" />
-      <workItem from="1609674379417" duration="63493000" />
+      <workItem from="1609674379417" duration="66014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200512000" />
+    <option name="totallyTimeSpent" value="203033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -513,8 +441,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32261768" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5002644" side_tool="true" weight="0.32261768" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4997356" visible="true" weight="0.32261768" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -669,16 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/nouislider-react/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -788,16 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-220">
@@ -825,10 +733,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="146" column="32" selection-start-line="146" selection-start-column="32" selection-end-line="146" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/service/RestApi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="114" column="20" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
+        <state relative-caret-position="231">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>

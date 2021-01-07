@@ -14,13 +14,18 @@ const getCPUManufacturer = async () => {
     return await api.get('/filter/cpu')
 };
 
+const getSeries = async () => {
+    return await api.get('/filter/cpuSeries')
+};
+
 const getGraphics = async () => {
     return await api.get('/filter/cpuGraphics')
 };
 
-const filterCPU = async (manufacturer, fCount, tCount, fClock, tClock, graphics) => {
+const filterCPU = async (manufacturer, series, fCount, tCount, fClock, tClock, graphics) => {
     return await api.post('/category/cpu', {
         manufacturer: manufacturer,
+        series: series,
         fCount: fCount,
         tCount: tCount,
         fClock: fClock,
@@ -204,6 +209,7 @@ const filterSoftware = async (value) => {
 export default {
     fetchCPU,
     getCPUManufacturer,
+    getSeries,
     getGraphics,
     filterCPU,
     fetchMemory,

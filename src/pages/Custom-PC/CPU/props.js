@@ -4,17 +4,20 @@ function useViewModel() {
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
+    const [series, setSeries] = useState([]);
     const [graphics, setGraphics] = useState([]);
     const [fCount, setFCount] = useState('1');
     const [tCount, setTCount] = useState('64');
     const [fClock, setFClock] = useState('1.10');
     const [tClock, setTClock] = useState('4.70');
     const [sManufacturer, setSManufacturer] = useState('All');
+    const [sSeries, setSSeries] = useState('All');
     const [sGraphics, setSGraphics] = useState('All');
 
     useEffect(() => {
         fetchData();
-        fetchManufacturer();
+        getManufacturer();
+        getSeries();
         getGraphics()
     }, []);
 
@@ -24,9 +27,14 @@ function useViewModel() {
         setProducts(res['data']['cpu'])
     };
 
-    const fetchManufacturer = async () => {
+    const getManufacturer = async () => {
         let res = await RestApi.getCPUManufacturer();
         setManufacturer(res['data']['manufacturer'])
+    };
+
+    const getSeries = async () => {
+        let res = await RestApi.getSeries();
+        setSeries(res['data']['series'])
     };
 
     const getGraphics  = async () => {
@@ -35,9 +43,17 @@ function useViewModel() {
     };
 
     const filterManufacturer = async (value) => {
-        let res = await RestApi.filterCPU(value, fCount, tCount, fClock, tClock, sGraphics);
+        let res = await RestApi.filterCPU(value, sSeries, fCount, tCount, fClock, tClock, sGraphics);
         let length = res['data']['cpu'].length;
         setSManufacturer(value);
+        setProductLength(length);
+        setProducts(res['data']['cpu']);
+    };
+
+    const filterSeries = async (value) => {
+        let res = await RestApi.filterCPU(sManufacturer, value, fCount, tCount, fClock, tClock, sGraphics);
+        let length = res['data']['cpu'].length;
+        setSSeries(value);
         setProductLength(length);
         setProducts(res['data']['cpu']);
     };
@@ -57,7 +73,7 @@ function useViewModel() {
     };
 
     const filterGraphics = async (value) => {
-        let res = await RestApi.filterCPU(sManufacturer, fCount, tCount, fClock, tClock, value);
+        let res = await RestApi.filterCPU(sManufacturer, sSeries, fCount, tCount, fClock, tClock, value);
         let length = res['data']['cpu'].length;
         setSGraphics(value);
         setProductLength(length);
@@ -68,14 +84,17 @@ function useViewModel() {
         products, setProducts,
         productLength, setProductLength,
         manufacturer, setManufacturer,
+        series, setSeries,
         graphics, setGraphics,
         fCount, setFCount,
         tCount, setTCount,
         fClock, setFClock,
         tClock, setTClock,
         sManufacturer, setSManufacturer,
+        sSeries, setSSeries,
         sGraphics, setSGraphics,
         filterManufacturer,
+        filterSeries,
         filterGraphics,
         filterCount,
         filterClock,

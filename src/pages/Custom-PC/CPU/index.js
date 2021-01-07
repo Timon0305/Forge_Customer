@@ -43,6 +43,21 @@ export const CPU = (props) => {
                                                 }
                                             </div>
                                             <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Series</h5>
+                                                {
+                                                    vm.series.map((item, index) =>
+                                                        <Series
+                                                            key={index}
+                                                            id={item._id}
+                                                            status={item.status}
+                                                            name={item.name}
+                                                            checked={() => vm.filterSeries(item.name)}
+                                                        />
+                                                    )
+                                                }
+                                            </div>
+                                            <hr/>
                                             <div className="mt-1 mb-2">
                                                 <h5 className='text-white mt-3 mb-4'>CORE COUNT</h5>
                                                 <br/>
@@ -111,6 +126,25 @@ export const Manufacturer = ({id, name, status, checked}) => {
                     className="custom-control-input font-size-24"
                     id={id}
                     name='manufacturer'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Series = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='series'
                     defaultChecked={status}
                     onChange={checked}
                 />
