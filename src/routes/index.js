@@ -50,7 +50,7 @@ const publicRoutes = [
 	{ path : '/products/cpu-cooler', component: CPUCooler},
 	{ path : '/products/case', component: Case},
 	{ path : '/products/storage', component: Storage},
-	{ path : '/products/software', component: Software},
+	{ path : '/products/operating-system', component: Software},
 
 
 	{ path: "/ecommerce-products", component: EcommerceProducts },

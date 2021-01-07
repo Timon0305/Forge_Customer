@@ -5,6 +5,7 @@ import Nouislider from "nouislider-react";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from './props'
+import Breadcrumbs from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Motherboard = (props) => {
@@ -13,19 +14,22 @@ export const Motherboard = (props) => {
     return (
         <React.Fragment>
             <div className="page-content" style={styles.container}>
-                <Container fluid>
-                    <Row>
+                <Container fluid style={styles.contentPadding}>
+                    <Row style={styles.contentBackground}>
                         <Col xs='12' style={styles.videoStyle}>
                             <CustomVideo/>
                         </Col>
+                    </Row>
+                    <Row className='container-fluid' style={styles.subHeader}>
+                        <Breadcrumbs />
                     </Row>
                     <Row>
                         <Col xs={12} style={styles.paddingStyle}>
                             <Card className={classes.customerCardBackground}>
                                 <Row>
-                                    <Col lg={1}/>
-                                    <Col lg={2} className='m-5'>
-                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                    <Col lg={1} md={0} />
+                                    <Col lg={3} md={4}>
+                                        <div className="pt-3 text-left m-5">
                                             <h3 className="text-white mb-3">Filters</h3>
                                             <hr/>
                                             <div>
@@ -123,7 +127,7 @@ export const Motherboard = (props) => {
                                             <hr/>
                                         </div>
                                     </Col>
-                                    <Col lg={8}>
+                                    <Col lg={7} md={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -287,10 +291,22 @@ export const Products = ({products, productLength}) => {
 };
 
 const styles = {
+    contentPadding: {
+        padding: '0'
+    },
+    contentBackground: {
+        background: 'black'
+    },
     container : {
         paddingLeft: '0px',
         paddingRight: '0px',
         marginTop: '0px'
+    },
+    subHeader: {
+        width: '100%',
+        margin: 'auto',
+        padding: '0',
+        background: 'black'
     },
     videoStyle : {
         paddingLeft: '0px',
