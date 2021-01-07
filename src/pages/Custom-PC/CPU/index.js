@@ -45,17 +45,19 @@ export const CPU = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Series</h5>
-                                                {
-                                                    vm.series.map((item, index) =>
-                                                        <Series
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterSeries(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.series.map((item, index) =>
+                                                            <Series
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterSeries(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div className="mt-1 mb-2">
@@ -84,17 +86,19 @@ export const CPU = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Integrated Graphics</h5>
-                                                {
-                                                    vm.graphics.map((item, index) =>
-                                                        <Graphics
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterGraphics(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.graphics.map((item, index) =>
+                                                            <Graphics
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterGraphics(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                         </div>

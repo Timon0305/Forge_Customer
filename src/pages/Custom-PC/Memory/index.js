@@ -29,17 +29,19 @@ export const Memory = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>MANUFACTURER</h5>
-                                                {
-                                                    vm.manufacturer.map((item, index) =>
-                                                        <Manufacturer
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterManufacturer(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.manufacturer.map((item, index) =>
+                                                            <Manufacturer
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterManufacturer(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div className="mt-1 mb-2">
@@ -56,32 +58,36 @@ export const Memory = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Modules</h5>
-                                                {
-                                                    vm.module.map((item, index) =>
-                                                        <Module
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterModule(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.module.map((item, index) =>
+                                                            <Module
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterModule(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Color</h5>
-                                                {
-                                                    vm.color.map((item, index) =>
-                                                        <Color
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterColor(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.color.map((item, index) =>
+                                                            <Color
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterColor(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div className="mt-1 mb-2">

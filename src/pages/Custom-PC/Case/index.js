@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
+import Nouislider from "nouislider-react";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Case = (props) => {
@@ -22,24 +23,111 @@ export const Case = (props) => {
                             <Card className={classes.customerCardBackground}>
                                 <Row>
                                     <Col lg={1}/>
-                                    <Col lg={3}>
-                                        <div className="mt-4 pt-3 text-sm-center text-center text-md-center text-lg-left">
-                                            <h3 className="text-white mb-3">MANUFACTURERS</h3>
-                                            {
-                                                vm.filter.map((item, index) =>
-                                                    <Filters
-                                                        key={index}
-                                                        id={item.id}
-                                                        status={item.status}
-                                                        name={item.name}
-                                                        checked={() => vm.filterProducts(item.name)}
-                                                    />
-                                                )
-                                            }
+                                    <Col lg={2} className='m-5'>
+                                        <div className="pt-3 text-sm-center text-center text-md-center text-lg-left">
+                                            <h3 className="text-white mb-3">Filters</h3>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>MANUFACTURER</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.manufacturer.map((item, index) =>
+                                                            <Manufacturer
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterManufacturer(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div className="mt-1 mb-2">
+                                                <h5 className='text-white mt-3 mb-4'>Price</h5>
+                                                <br/>
+                                                <Nouislider
+                                                    range={{ min: 0, max: 2637 }}
+                                                    tooltips={true} start={[0, 2637]}
+                                                    connect
+                                                    animate={true}
+                                                    onSlide={(data) => vm.filterPrice(data)}
+                                                />
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Type</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.type.map((item, index) =>
+                                                            <Type
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterType(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Color</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.color.map((item, index) =>
+                                                            <Color
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterColor(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Power Supply</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.powerSupply.map((item, index) =>
+                                                            <PowerSupply
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterPowerSupply(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div>
+                                                <h5 className='text-white mt-3'>Side Panel Window</h5>
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.window.map((item, index) =>
+                                                            <Window
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterWindow(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
+                                            </div>
+                                            <hr/>
                                         </div>
 
                                     </Col>
-                                    <Col lg={7}>
+                                    <Col lg={8}>
                                         <Products
                                             products={vm.products}
                                             productLength={vm.productLength}
@@ -56,7 +144,7 @@ export const Case = (props) => {
     )
 };
 
-export const Filters = ({id, name, status, checked}) => {
+export const Manufacturer = ({id, name, status, checked}) => {
     return (
         <React.Fragment>
             <div className="custom-control custom-checkbox mt-2">
@@ -64,7 +152,83 @@ export const Filters = ({id, name, status, checked}) => {
                     type="radio"
                     className="custom-control-input font-size-24"
                     id={id}
-                    name='setDistance'
+                    name='manufacturer'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Type = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='type'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Color = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='color'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const PowerSupply = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='powerSupply'
+                    defaultChecked={status}
+                    onChange={checked}
+                />
+                <Label className="custom-control-label text-white" htmlFor={id} >{name}</Label>
+            </div>
+
+        </React.Fragment>
+    )
+};
+
+export const Window = ({id, name, status, checked}) => {
+    return (
+        <React.Fragment>
+            <div className="custom-control custom-checkbox mt-2">
+                <Input
+                    type="radio"
+                    className="custom-control-input font-size-24"
+                    id={id}
+                    name='window'
                     defaultChecked={status}
                     onChange={checked}
                 />

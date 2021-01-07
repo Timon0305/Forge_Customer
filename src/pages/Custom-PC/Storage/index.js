@@ -30,17 +30,19 @@ export const Storage = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>MANUFACTURER</h5>
-                                                {
-                                                    vm.manufacturer.map((item, index) =>
-                                                        <Manufacturer
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterManufacturer(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.manufacturer.map((item, index) =>
+                                                            <Manufacturer
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterManufacturer(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div className="mt-1 mb-2">
@@ -69,17 +71,19 @@ export const Storage = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Type</h5>
-                                                {
-                                                    vm.types.map((item, index) =>
-                                                        <Type
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterType(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.types.map((item, index) =>
+                                                            <Type
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterType(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div className="mt-1 mb-2">
@@ -96,17 +100,19 @@ export const Storage = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Form Factor</h5>
-                                                {
-                                                    vm.factor.map((item, index) =>
-                                                        <Factor
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterFactor(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.factor.map((item, index) =>
+                                                            <Factor
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterFactor(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                         </div>

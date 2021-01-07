@@ -28,47 +28,53 @@ export const CPUCooler = (props) => {
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>MANUFACTURER</h5>
-                                                {
-                                                    vm.manufacturer.map((item, index) =>
-                                                        <Manufacturer
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterManufacturer(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.manufacturer.map((item, index) =>
+                                                            <Manufacturer
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterManufacturer(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>Water Cooled</h5>
-                                                {
-                                                    vm.waterCooled.map((item, index) =>
-                                                        <WaterCooled
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterWaterCooled(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.waterCooled.map((item, index) =>
+                                                            <WaterCooled
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterWaterCooled(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                             <div>
                                                 <h5 className='text-white mt-3'>FanLess</h5>
-                                                {
-                                                    vm.fanLess.map((item, index) =>
-                                                        <FanLess
-                                                            key={index}
-                                                            id={item._id}
-                                                            status={item.status}
-                                                            name={item.name}
-                                                            checked={() => vm.filterFanLess(item.name)}
-                                                        />
-                                                    )
-                                                }
+                                                <div className='filterHidden'>
+                                                    {
+                                                        vm.fanLess.map((item, index) =>
+                                                            <FanLess
+                                                                key={index}
+                                                                id={item._id}
+                                                                status={item.status}
+                                                                name={item.name}
+                                                                checked={() => vm.filterFanLess(item.name)}
+                                                            />
+                                                        )
+                                                    }
+                                                </div>
                                             </div>
                                             <hr/>
                                         </div>

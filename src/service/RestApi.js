@@ -161,12 +161,36 @@ const fetchCase = async () => {
     return await api.get('/category/case')
 };
 
-const fetchCaseFilter = async () => {
-    return await api.get('/filter/case')
+const getCaseManufacturer = async () => {
+    return await api.get('/filter/caseManufacturer')
 };
 
-const filterCase = async (value) => {
-    return await api.post('/category/case', {filter: value})
+const getCaseType = async () => {
+    return await api.get('/filter/caseType')
+};
+
+const getCaseColor = async () => {
+    return await api.get('/filter/caseColor')
+};
+
+const getCasePowerSupply = async () => {
+    return await api.get('/filter/casePowerSupply')
+};
+
+const getCaseWindow = async () => {
+    return await api.get('/filter/caseWindow')
+};
+
+const filterCase = async (manufacturer, fPrice, tPrice, type, color, powerSupply, window) => {
+    return await api.post('/category/case', {
+        manufacturer: manufacturer,
+        fPrice: fPrice,
+        tPrice: tPrice,
+        type: type,
+        color: color,
+        powerSupply: powerSupply,
+        window: window
+    })
 };
 
 const fetchStorage = async () => {
@@ -237,7 +261,11 @@ export default {
     getFanLess,
     filterCPUCooler,
     fetchCase,
-    fetchCaseFilter,
+    getCaseManufacturer,
+    getCaseType,
+    getCaseColor,
+    getCasePowerSupply,
+    getCaseWindow,
     filterCase,
     fetchStorage,
     getStorageManufacturer,
