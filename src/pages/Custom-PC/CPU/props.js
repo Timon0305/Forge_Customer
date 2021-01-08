@@ -24,8 +24,8 @@ function useViewModel() {
     useEffect(() => {
         fetchData();
         getManufacturer();
+        getGraphics();
         getSeries();
-        getGraphics()
     }, []);
 
     const fetchData = async () => {
@@ -39,14 +39,14 @@ function useViewModel() {
         setManufacturer(res['data']['manufacturer'])
     };
 
-    const getSeries = async () => {
-        let res = await RestApi.getSeries();
-        setSeries(res['data']['series'])
-    };
-
     const getGraphics  = async () => {
         let res = await RestApi.getGraphics();
         setGraphics(res['data']['graphics'])
+    };
+
+    const getSeries = async () => {
+        let res = await RestApi.getSeries();
+        setSeries(res['data']['series'])
     };
 
     const filterManufacturer = async (value) => {
