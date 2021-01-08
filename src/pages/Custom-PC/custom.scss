@@ -42,7 +42,16 @@ hr {
   height: 200px;
   overflow: auto;
 }
-.subHeader {
-  margin: auto;
-  background: #000;
+.subHeaderContainer {
+  padding-left:  0!important;
+  padding-right:  0!important;
+  margin-top: -8px!important;
+}
+
+@media (min-width: 991px) {
+  .subHeaderContainer {
+    padding-left:  0!important;
+    padding-right:  0!important;
+    margin-top: 42px!important;
+  }
 }

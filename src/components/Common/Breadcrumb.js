@@ -69,7 +69,7 @@ class Breadcrumbs extends Component {
                                 <li className="nav-item dropdown">
                                     <Link to="/products/operating-system"
                                           className="nav-link dropdown-toggle arrow-none text-pink font-weight-bold font-size-18" >
-                                        OPERATING SYSTEM
+                                        SYSTEM
                                     </Link>
                                 </li>
                             </ul>

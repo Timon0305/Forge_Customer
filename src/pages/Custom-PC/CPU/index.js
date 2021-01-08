@@ -12,7 +12,7 @@ export const CPU = (props) => {
 
     return (
         <React.Fragment>
-            <div className={"page-content"} style={styles.container}>
+            <div className={"page-content subHeaderContainer"}>
                 <Container fluid style={styles.contentPadding}>
                     <Row className='container-fluid' style={styles.subHeader}>
                         <Breadcrumbs />
@@ -255,11 +255,6 @@ const styles = {
     },
     contentBackground: {
         background: 'black'
-    },
-    container : {
-        paddingLeft: '0px',
-        paddingRight: '0px',
-        marginTop: '44px'
     },
     subHeader: {
         width: '100%',

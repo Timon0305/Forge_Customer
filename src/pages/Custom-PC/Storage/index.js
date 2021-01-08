@@ -12,7 +12,7 @@ export const Storage = (props) => {
 
     return (
         <React.Fragment>
-            <div className="page-content" style={styles.container}>
+            <div className="page-content subHeaderContainer" >
                 <Container fluid style={styles.contentPadding}>
                     <Row className='container-fluid' style={styles.subHeader}>
                         <Breadcrumbs />
