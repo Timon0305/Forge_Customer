@@ -1,7 +1,6 @@
 import React from 'react';
 import {Container, Row, Col, Card, Input, Label, CardBody, Button} from "reactstrap";
 import {Link} from "react-router-dom";
-import CustomVideo from "./../Custom-Video";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
 import Breadcrumbs from "../../../components/Common/Breadcrumb";
@@ -13,11 +12,6 @@ export const Software = (props) => {
         <React.Fragment>
             <div className="page-content" style={styles.container}>
                 <Container fluid style={styles.contentPadding}>
-                    <Row style={styles.contentBackground}>
-                        <Col xs='12' style={styles.videoStyle}>
-                            <CustomVideo/>
-                        </Col>
-                    </Row>
                     <Row className='container-fluid' style={styles.subHeader}>
                         <Breadcrumbs />
                     </Row>
@@ -142,7 +136,7 @@ const styles = {
     container : {
         paddingLeft: '0px',
         paddingRight: '0px',
-        marginTop: '0px'
+        marginTop: '44px'
     },
     subHeader: {
         width: '100%',
