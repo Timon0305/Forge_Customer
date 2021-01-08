@@ -69,7 +69,7 @@ function useViewModel() {
     };
 
     const getCartProduct = () => {
-        let products = JSON.parse(sessionStorage.getItem('cartItems'));
+        let products = JSON.parse(sessionStorage.getItem('cartItems')) === null ? [] : JSON.parse(sessionStorage.getItem('cartItems'));
         setCartProduct(products);
     };
 

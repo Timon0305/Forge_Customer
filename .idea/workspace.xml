@@ -2,28 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e96792bb-1a5d-424a-8180-b19dd94150c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HorizontalLayout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HorizontalLayout/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/product/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/product/reducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,7 +41,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="2" />
           <entry key="JSON" value="9" />
-          <entry key="JavaScript" value="404" />
+          <entry key="JavaScript" value="414" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SCSS" value="19" />
           <entry key="TypeScript" value="13" />
@@ -70,7 +58,7 @@
           <entry key="CSS" value="272" />
           <entry key="HTML" value="28" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="44150" />
+          <entry key="JavaScript" value="44204" />
           <entry key="SCSS" value="680" />
         </counts>
       </usages-collector>
@@ -79,17 +67,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="244" selection-start-line="244" selection-end-line="294" selection-end-column="2" />
+            <state relative-caret-position="308">
+              <caret line="107" column="135" selection-start-line="107" selection-start-column="135" selection-end-line="107" selection-end-column="135" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="71" column="135" selection-start-line="71" selection-start-column="135" selection-end-line="71" selection-end-column="135" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#8569#9116#0" />
-                <element signature="e#9174#9715#0" />
-                <element signature="e#9773#10314#0" />
-                <element signature="e#10371#10911#0" />
-                <element signature="e#13043#15352#0" />
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="86" column="135" selection-start-line="86" selection-start-column="135" selection-end-line="86" selection-end-column="135" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#3122#4327#0" />
               </folding>
             </state>
           </provider>
@@ -98,58 +103,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="160" column="18" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="18" />
+            <state relative-caret-position="279">
+              <caret line="101" column="135" selection-start-line="101" selection-start-column="135" selection-end-line="101" selection-end-column="135" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#3813#5018#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="151" column="42" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="151" selection-end-column="42" />
+            <state relative-caret-position="336">
+              <caret line="30" column="135" selection-start-line="30" selection-start-column="135" selection-end-line="30" selection-end-column="135" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#8190#8737#0" />
-                <element signature="e#8793#9332#0" />
-                <element signature="e#9390#9931#0" />
-                <element signature="e#11943#14103#0" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js">
+        <entry file="file://$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1128">
-              <caret line="228" column="30" lean-forward="true" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
+            <state relative-caret-position="248">
+              <caret line="151" column="6" selection-end-line="157" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#6542#7089#0" />
-                <element signature="e#7148#7690#0" />
-                <element signature="e#7747#8287#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-588">
-              <caret line="273" column="35" selection-start-line="273" selection-start-column="30" selection-end-line="273" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#8583#9130#0" />
-                <element signature="e#9192#9737#0" />
-                <element signature="e#9796#10338#0" />
-                <element signature="e#10395#10935#0" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,11 +139,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="160" selection-start-line="160" selection-end-line="160" selection-end-column="18" />
+            <state relative-caret-position="345">
+              <caret line="101" column="135" selection-start-line="101" selection-start-column="135" selection-end-line="101" selection-end-column="135" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#3787#4992#0" />
               </folding>
             </state>
           </provider>
@@ -171,45 +151,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="154" selection-start-line="154" selection-end-line="154" selection-end-column="18" />
+            <state relative-caret-position="405">
+              <caret line="95" column="135" selection-start-line="95" selection-start-column="135" selection-end-line="95" selection-end-column="135" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#3438#4643#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#2805#4010#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/config.js">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="75">
+              <caret line="77" column="135" selection-start-line="77" selection-start-column="135" selection-end-line="77" selection-end-column="135" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="91" column="135" lean-forward="true" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="135" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -284,25 +254,25 @@
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js" />
         <option value="$PROJECT_DIR$/src/store/product/actions.js" />
         <option value="$PROJECT_DIR$/src/store/product/reducer.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js" />
         <option value="$PROJECT_DIR$/src/components/HorizontalLayout/Header.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js" />
-        <option value="$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/index.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js" />
         <option value="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" />
         <option value="$PROJECT_DIR$/src/config.js" />
+        <option value="$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js" />
+        <option value="$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js" />
       </list>
     </option>
   </component>
@@ -447,6 +417,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
+              <item name="Operating-Software" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="customer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Custom-PC" type="462c0819:PsiDirectoryNode" />
               <item name="Power-Supply" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -567,12 +545,12 @@
       <workItem from="1608893564947" duration="115043000" />
       <workItem from="1609404256299" duration="599000" />
       <workItem from="1609674379417" duration="77841000" />
-      <workItem from="1610034510882" duration="55171000" />
+      <workItem from="1610034510882" duration="55919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270031000" />
+    <option name="totallyTimeSpent" value="270779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -846,16 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding>
-            <element signature="e#3823#5027#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -917,38 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="147" column="18" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#2872#2905#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#2589#3793#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -959,28 +895,6 @@
             <element signature="e#9933#10474#0" />
             <element signature="e#10531#11071#0" />
             <element signature="e#11191#13500#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#3122#4327#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#1131#2336#0" />
           </folding>
         </state>
       </provider>
@@ -1009,17 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="160" column="18" selection-start-line="160" selection-start-column="8" selection-end-line="160" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#3813#5018#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -1035,21 +938,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="160" selection-start-line="160" selection-end-line="160" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#3787#4992#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="534">
-          <caret line="151" column="42" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="151" selection-end-column="42" />
+          <caret line="151" column="42" selection-start-line="117" selection-start-column="36" selection-end-line="151" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#8190#8737#0" />
@@ -1063,34 +955,12 @@
     <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1128">
-          <caret line="228" column="30" lean-forward="true" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
+          <caret line="228" column="30" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#6542#7089#0" />
             <element signature="e#7148#7690#0" />
             <element signature="e#7747#8287#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="154" selection-start-line="154" selection-end-line="154" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#3438#4643#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#2805#4010#0" />
           </folding>
         </state>
       </provider>
@@ -1107,7 +977,105 @@
     <entry file="file://$PROJECT_DIR$/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CommonForBoth/TopbarDropdown/CartMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="151" column="6" selection-end-line="157" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="91" column="135" lean-forward="true" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Case/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="107" column="135" selection-start-line="107" selection-start-column="135" selection-end-line="107" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/CPU-Cooler/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="71" column="135" selection-start-line="71" selection-start-column="135" selection-end-line="71" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Memory/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="86" column="135" selection-start-line="86" selection-start-column="135" selection-end-line="86" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#3122#4327#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Motherboard/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="101" column="135" selection-start-line="101" selection-start-column="135" selection-end-line="101" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Operating-Software/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="30" column="135" selection-start-line="30" selection-start-column="135" selection-end-line="30" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Power-Supply/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="101" column="135" selection-start-line="101" selection-start-column="135" selection-end-line="101" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Storage/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="95" column="135" selection-start-line="95" selection-start-column="135" selection-end-line="95" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/Custom-PC/Video-Card/props.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="77" column="135" selection-start-line="77" selection-start-column="135" selection-end-line="77" selection-end-column="135" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

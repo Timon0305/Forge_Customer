@@ -151,7 +151,7 @@ const styles = {
         background: 'yellow'
     },
     cartMenu : {
-        height : '300px',
+        maxHeight : '300px',
         overflow: 'scroll'
     }
 };
