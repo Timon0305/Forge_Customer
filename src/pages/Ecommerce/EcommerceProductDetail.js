@@ -16,7 +16,7 @@ import avatar4 from "../../assets/images/users/avatar-4.jpg";
 import avatar5 from "../../assets/images/users/avatar-5.jpg";
 
 //Import Breadcrumb
-import Breadcrumbs from '../../components/Common/Breadcrumb';
+import {Breadcrumbs} from "../../../src/components/Common/Breadcrumb";
 
 class EcommerceProductDetail extends Component {
     constructor(props) {

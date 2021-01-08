@@ -90,7 +90,8 @@
     "simplebar-react": "^2.1.0",
     "styled-components": "^5.0.1",
     "toastr": "^2.1.4",
-    "video-react": "^0.14.1"
+    "video-react": "^0.14.1",
+    "classnames": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

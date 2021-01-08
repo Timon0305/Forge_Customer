@@ -20,7 +20,7 @@ import product5 from "../../assets/images/product/img-5.png";
 import product6 from "../../assets/images/product/img-6.png";
 
 //Import Breadcrumb
-import Breadcrumbs from '../../components/Common/Breadcrumb';
+import {Breadcrumbs} from "../../../src/components/Common/Breadcrumb";
 
 class EcommerceProducts extends Component {
     constructor() {

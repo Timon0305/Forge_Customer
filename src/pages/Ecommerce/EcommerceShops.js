@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 
 //Import Breadcrumb
-import Breadcrumbs from '../../components/Common/Breadcrumb';
+import {Breadcrumbs} from "../../../src/components/Common/Breadcrumb";
 
 //Import Card
 import CardShop from "./CardShop";

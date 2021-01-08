@@ -4,7 +4,7 @@ import classes from '../../Dashboard/BackgroundVideo.module.css';
 import {Link} from "react-router-dom";
 import useViewModel from "./props";
 import '../custom.scss'
-import Breadcrumbs from "../../../components/Common/Breadcrumb";
+import {Breadcrumbs} from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 export const CPUCooler = (props) => {
     const vm = useViewModel(props);

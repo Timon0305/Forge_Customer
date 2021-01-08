@@ -3,7 +3,7 @@ import {Container, Row, Col, Card, Input, Label, CardBody, Button} from "reactst
 import {Link} from "react-router-dom";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
-import Breadcrumbs from "../../../components/Common/Breadcrumb";
+import {Breadcrumbs} from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Software = (props) => {

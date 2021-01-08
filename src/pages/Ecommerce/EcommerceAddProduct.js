@@ -5,7 +5,7 @@ import Select from 'react-select';
 import Dropzone from 'react-dropzone';
 
 //Import Breadcrumb
-import Breadcrumbs from '../../components/Common/Breadcrumb';
+import {Breadcrumbs} from "../../../src/components/Common/Breadcrumb";
 
 class EcommerceAddProduct extends Component {
     constructor(props) {

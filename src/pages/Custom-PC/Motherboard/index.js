@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import Nouislider from "nouislider-react";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from './props'
-import Breadcrumbs from "../../../components/Common/Breadcrumb";
+import {Breadcrumbs} from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
 
 export const Motherboard = (props) => {
