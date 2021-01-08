@@ -23,7 +23,8 @@ function useViewModel() {
         fetchData();
         getManufacturer();
         getModules();
-        getColor()
+        getColor();
+        getCartProduct();
     }, []);
 
     const fetchData = async () => {
@@ -80,6 +81,11 @@ function useViewModel() {
         let tSpeed = value[1];
         setFSpeed(fSpeed);
         setTSpeed(tSpeed);
+    };
+
+    const getCartProduct = () => {
+        let products = JSON.parse(sessionStorage.getItem('cartItems'));
+        setCartProduct(products);
     };
 
     const addProduct = (id) => {

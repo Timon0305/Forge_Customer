@@ -124,10 +124,10 @@ export const Memory = (props) => {
                                                             image={item.image}
                                                             speed={item.speed}
                                                             modules={item.modules}
-                                                            gbPrice={item.gbPrice}
+                                                            gbPrice={item.gbprice}
                                                             color={item.color}
-                                                            fLatency={item.fLatency}
-                                                            cLatency={item.cLatency}
+                                                            fLatency={item.flatency}
+                                                            cLatency={item.clatency}
                                                             price={item.price}
                                                             addToCart={() => vm.addProduct(item._id)}
                                                         />

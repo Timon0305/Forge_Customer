@@ -1,12 +1,18 @@
 import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
-function useViewModel(props) {
+import {useDispatch} from "react-redux";
+import {addToCart} from "../../../store/product/actions";
+function useViewModel() {
+    const dispatch = useDispatch();
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [filter, setFilter] = useState([]);
+    const [cartProduct, setCartProduct] = useState([]);
+    const [cartNum, setCartNum] = useState(1);
 
     useEffect(() => {
         fetchData();
+        getCartProduct();
     }, []);
 
     const fetchData = async () => {
@@ -21,11 +27,51 @@ function useViewModel(props) {
         setProducts(res['data']['software'])
     };
 
+    const getCartProduct = () => {
+        let products = JSON.parse(sessionStorage.getItem('cartItems'));
+        setCartProduct(products);
+    };
+
+    const addProduct = (id) => {
+        let price = '';
+        for (let product of products) {
+            if (product._id === id) {
+                if (cartProduct.length === 0) {
+                    product.quantity = cartNum;
+                    cartProduct.push(product);
+                    price = parseFloat(product['price'] * parseInt(cartNum))
+                }
+                else {
+                    let newProduct = true;
+                    for (let cartItem of cartProduct) {
+                        if (cartItem['_id'] === id) {
+                            price = parseFloat(product['price']) * parseInt(cartNum);
+                            cartItem.quantity += cartNum;
+                            newProduct = false;
+                        }
+                    }
+                    if (newProduct) {
+                        product.quantity = cartNum;
+                        price = parseFloat(product['price']) * parseInt(cartNum);
+                        cartProduct.push(product)
+                    }
+                }
+                dispatch(addToCart(cartProduct));
+
+                sessionStorage.setItem('cartItems', JSON.stringify(cartProduct));
+                break;
+            }
+        }
+    };
+
     return {
         products, setProducts,
         productLength, setProductLength,
         filter, setFilter,
-        filterProducts
+        cartProduct, setCartProduct,
+        cartNum, setCartNum,
+        filterProducts,
+        addProduct
     }
 }
 

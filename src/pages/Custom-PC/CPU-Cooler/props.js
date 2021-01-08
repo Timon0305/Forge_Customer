@@ -1,11 +1,16 @@
 import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
+import {useDispatch} from "react-redux";
+import {addToCart} from "../../../store/product/actions";
 function useViewModel() {
+    const dispatch = useDispatch();
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
     const [waterCooled, setWaterCooled] = useState([]);
     const [fanLess, setFanLess] = useState([]);
+    const [cartProduct, setCartProduct] = useState([]);
+    const [cartNum, setCartNum] = useState(1);
     const [sManufacturer, setSManufacturer] = useState('All');
     const [sCooled, setSCooled] = useState('All');
     const [sFanLess, setSFanLess] = useState('All');
@@ -15,6 +20,7 @@ function useViewModel() {
         getManufacturer();
         getWaterCooled();
         getFanLess();
+        getCartProduct();
     }, []);
 
     const fetchData = async () => {
@@ -62,6 +68,44 @@ function useViewModel() {
         setProducts(res['data']['cooler'])
     };
 
+    const getCartProduct = () => {
+        let products = JSON.parse(sessionStorage.getItem('cartItems'));
+        setCartProduct(products);
+    };
+
+    const addProduct = (id) => {
+        let price = 0;
+        for (let product of products) {
+            if (product._id === id) {
+                if (cartProduct.length === 0) {
+                    product.quantity = cartNum;
+                    cartProduct.push(product);
+                    price = parseFloat(product['price'] * parseInt(cartNum))
+                }
+                else {
+                    let newProduct = true;
+                    for (let cartItem of cartProduct) {
+                        if (cartItem['_id'] === id) {
+                            price = parseFloat(product['price']) * parseInt(cartNum);
+                            cartItem.quantity += cartNum;
+                            newProduct = false;
+                        }
+                    }
+                    if (newProduct) {
+                        product.quantity = cartNum;
+                        price = parseFloat(product['price']) * parseInt(cartNum);
+                        cartProduct.push(product)
+                    }
+                }
+                dispatch(addToCart(cartProduct));
+
+                sessionStorage.setItem('cartItems', JSON.stringify(cartProduct));
+                break;
+            }
+        }
+    };
+
+
     return {
         products, setProducts,
         productLength, setProductLength,
@@ -71,9 +115,12 @@ function useViewModel() {
         sManufacturer, setSManufacturer,
         sCooled, setSCooled,
         sFanLess, setSFanLess,
+        cartProduct, setCartProduct,
+        cartNum, setCartNum,
         filterManufacturer,
         filterWaterCooled,
         filterFanLess,
+        addProduct
     }
 }
 

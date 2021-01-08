@@ -1,7 +1,7 @@
 import {ADD_TO_CART} from "./actionTypes";
 
 const initialState = {
-    products: []
+    products: [],
 };
 
 const Product = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const Product = (state = initialState, action) => {
         case ADD_TO_CART:
             state = {
                 ...state,
-                products: [...action.payload.product]
+                products: [...action.payload.product],
             };
             break;
         default:

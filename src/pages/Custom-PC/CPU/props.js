@@ -26,6 +26,7 @@ function useViewModel() {
         getManufacturer();
         getGraphics();
         getSeries();
+        getCartProduct();
     }, []);
 
     const fetchData = async () => {
@@ -87,8 +88,13 @@ function useViewModel() {
         setProducts(res['data']['cpu']);
     };
 
+    const getCartProduct = () => {
+        let products = JSON.parse(sessionStorage.getItem('cartItems'));
+        setCartProduct(products);
+    };
+
     const addProduct = (id) => {
-        let price = '';
+        let price = 0;
         for (let product of products) {
             if (product._id === id) {
                 if (cartProduct.length === 0) {

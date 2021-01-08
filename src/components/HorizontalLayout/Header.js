@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown";
-import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu";
 
 import logo from "../../assets/images/logo-sm-light.png";
 import logoLight from "../../assets/images/logo-light.png";
@@ -154,8 +153,6 @@ class Header extends Component {
               </div>
 
               <LanguageDropdown />
-
-              {/*<ProfileMenu />*/}
 
               <CartMenu/>
             </div>

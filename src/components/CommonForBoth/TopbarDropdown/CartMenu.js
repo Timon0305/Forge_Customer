@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Dropdown, DropdownToggle, DropdownMenu, Row, Col} from "reactstrap";
 import SimpleBar from "simplebar-react";
 import {withNamespaces} from 'react-i18next';
+import {addToCart} from "../../../store/product/actions";
 
 class CartMenu extends Component {
     constructor(props) {
@@ -23,10 +24,12 @@ class CartMenu extends Component {
     }
 
     render() {
-        const cartProduct = JSON.parse(sessionStorage.getItem('cartItems')) ? JSON.parse(sessionStorage.getItem('cartItems')) : this.props.products;
+        const cartProduct = JSON.parse(sessionStorage.getItem('cartItems')) ?
+            JSON.parse(sessionStorage.getItem('cartItems')) :
+            this.props.products;
         let cartNum = 0;
         for (let item of cartProduct) {
-            cartNum += parseInt(item.quantity)
+            cartNum += parseInt(item.quantity);
         }
 
         return (
@@ -52,7 +55,7 @@ class CartMenu extends Component {
                               style={styles.cartItem}>{cartNum}</span>
                     </DropdownToggle>
 
-                    <DropdownMenu className="dropdown-menu dropdown-menu-lg p-0" right>
+                    <DropdownMenu className="dropdown-menu dropdown-menu-lg p-0" right >
                         <div className="pt-3 pl-3 pr-3">
                             <Row className="align-items-center">
                                 <Col>
@@ -61,7 +64,7 @@ class CartMenu extends Component {
                             </Row>
                         </div>
                         <hr/>
-                        <SimpleBar>
+                        <SimpleBar style={styles.cartMenu}>
                             {
                                 cartProduct.length !== 0 ? (
                                     cartProduct.map((cart, key) =>
@@ -138,7 +141,7 @@ const mapStateToProps = state => {
     return { products };
 };
 
-export default withNamespaces()(connect(mapStateToProps, null)(CartMenu));
+export default withNamespaces()(connect(mapStateToProps, {addToCart})(CartMenu));
 
 const styles = {
     cartItem : {
@@ -146,5 +149,9 @@ const styles = {
         padding: '5px',
         fontSize: '10px',
         background: 'yellow'
+    },
+    cartMenu : {
+        height : '300px',
+        overflow: 'scroll'
     }
 };
