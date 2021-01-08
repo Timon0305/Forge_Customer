@@ -260,7 +260,6 @@ export const Products = ({id, name, image, coreCount, coreClock, boostClock, tdp
     )
 };
 
-
 const styles = {
     contentPadding: {
         padding: '0'
