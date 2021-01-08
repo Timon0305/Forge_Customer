@@ -15,7 +15,7 @@ const getCPUManufacturer = async () => {
 };
 
 const getSeries = async () => {
-    return await api.get('/filter/cpuSeries')
+    return await api.get('/filter/cpuNameSeries')
 };
 
 const getGraphics = async () => {
