@@ -1,13 +1,9 @@
 import React, {Component} from "react";
-
 import { connect } from 'react-redux';
-
 import {Link} from "react-router-dom";
 import {Dropdown, DropdownToggle, DropdownMenu, Row, Col} from "reactstrap";
 import SimpleBar from "simplebar-react";
-
 import {withNamespaces} from 'react-i18next';
-import {webUrl} from "../../../config";
 
 class CartMenu extends Component {
     constructor(props) {
@@ -28,7 +24,6 @@ class CartMenu extends Component {
 
     render() {
         const cartProduct = JSON.parse(sessionStorage.getItem('cartItems')) ? JSON.parse(sessionStorage.getItem('cartItems')) : this.props.products;
-
         let cartNum = 0;
         for (let item of cartProduct) {
             cartNum += parseInt(item.quantity)
@@ -54,13 +49,7 @@ class CartMenu extends Component {
                             )
                         }
                         <span className="badge badge-light badge-pill"
-                              style={{
-                                  marginTop: '21px',
-                                  marginLeft: '6px',
-                                  border: '1px solid blue',
-                                  padding: '5px',
-                                  fontSize: '9px'
-                              }}>{cartNum}</span>
+                              style={styles.cartItem}>{cartNum}</span>
                     </DropdownToggle>
 
                     <DropdownMenu className="dropdown-menu dropdown-menu-lg p-0" right>
@@ -80,7 +69,7 @@ class CartMenu extends Component {
                                             <div className='pl-3 text-reset cursor'>
                                                 <div className="media">
                                                     <div className="avatar-xs mr-3">
-                                                        <img src={webUrl + '/public/products/' + cart.image}
+                                                        <img src={cart.image}
                                                              alt={cart.image}
                                                              height={34}
                                                              width={34}
@@ -88,16 +77,27 @@ class CartMenu extends Component {
                                                     </div>
                                                     <Row className="align-items-center">
                                                         <Col>
-                                                            <h6 className="mt-0 mb-1 text-primary">{cart.title}</h6>
+                                                            <h6 className="mt-0 mb-1 text-primary">{cart.name}</h6>
                                                             <div className="font-size-12 text-muted">
-                                                                <p className="mb-1">{cart.discount_price} SAR * { cart.quantity }</p>
-
+                                                                <p className="mb-1">
+                                                                    {
+                                                                        cart['price'].length ?
+                                                                            cart['price'] +  ' * ' +  cart.quantity :
+                                                                            '$ ' + 0 + ' * ' + cart.quantity
+                                                                    }
+                                                                 </p>
                                                             </div>
                                                         </Col>
                                                     </Row>
                                                     <div className="media-body">
                                                         <div className="col-auto text-right">
-                                                            <p className='text-dark font-size-14'> {parseInt(cart.discount_price) * parseInt(cart.quantity)} SAR</p>
+                                                            <p className='text-dark font-size-14'>
+                                                                {
+                                                                    cart['price'].length ?
+                                                                        parseFloat(cart['price'].split('$')[1]) * parseInt(cart.quantity) :
+                                                                        0
+                                                                } $
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -133,10 +133,18 @@ class CartMenu extends Component {
         );
     }
 }
-const mapStatetoProps = state => {
+const mapStateToProps = state => {
     const { products } = state.Product;
     return { products };
 };
 
+export default withNamespaces()(connect(mapStateToProps, null)(CartMenu));
 
-export default withNamespaces()(connect(mapStatetoProps, null)(CartMenu));
+const styles = {
+    cartItem : {
+        border: '1px solid blue',
+        padding: '5px',
+        fontSize: '10px',
+        background: 'yellow'
+    }
+};

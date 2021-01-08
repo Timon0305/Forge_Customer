@@ -1,8 +1,8 @@
 import React from 'react';
 import {Button, CardBody, Container, Row, Col, Card, Input, Label} from "reactstrap";
+import Nouislider from "nouislider-react";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
-import Nouislider from "nouislider-react";
 import '../custom.scss';
 import {Breadcrumbs} from "../../../components/Common/Breadcrumb";
 const noImage = 'https://www.allianceplast.com/wp-content/uploads/2017/11/no-image.png';
@@ -103,10 +103,39 @@ export const CPU = (props) => {
 
                                     </Col>
                                     <Col lg={7} md={8}>
-                                        <Products
-                                            products={vm.products}
-                                            productLength={vm.productLength}
-                                        />
+                                        <Row>
+                                            <Col xs={12}>
+                                                <h2 className='text-white text-center pt-4'>
+                                                    Choose A CPU
+                                                </h2>
+                                                <div className='pl-3 text-white text-left font-size-20'>
+                                                    {vm.productLength + ' Compatible Products'}
+                                                </div>
+                                                <hr/>
+                                            </Col>
+                                        </Row>
+                                        <Row className='mt-4 pl-3 pr-3'>
+                                            {
+                                                vm.products.map((item, index) =>
+                                                    <Col xl="4" sm="6" key={index}>
+                                                        <Products
+
+                                                            id={item._id}
+                                                            name={item.name}
+                                                            image={item.image}
+                                                            coreCount={item.coreCount}
+                                                            coreClock={item.coreClock}
+                                                            boostClock={item.boostClock}
+                                                            tdp={item.tdp}
+                                                            graphics={item.graphics}
+                                                            smt={item.smt}
+                                                            price={item.price}
+                                                            addToCart={() => vm.addProduct(item._id)}
+                                                        />
+                                                    </Col>
+                                                )
+                                            }
+                                        </Row>
                                     </Col>
                                     <Col lg={1} md={0}/>
                                 </Row>
@@ -176,77 +205,60 @@ export const Graphics = ({id, name, status, checked}) => {
     )
 };
 
-export const Products = ({products, productLength}) => {
+export const Products = ({id, name, image, coreCount, coreClock, boostClock, tdp, graphics, smt, price, addToCart}) => {
     return (
         <React.Fragment>
-            <Row>
-                <Col xs={12}>
-                    <h2 className='text-white text-center pt-4'>
-                        Choose A CPU
-                    </h2>
-                    <div className='pl-3 text-white text-left font-size-20'>
-                        {productLength + ' Compatible Products'}
+            <Card style={styles.cardBorder}>
+                <CardBody>
+                    <div className="product-img position-relative">
+                        {
+                            image === '/static/forever/img/no-image.png' ?
+                                <img src={noImage} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
+                                :
+                                <img src={image} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
+                        }
                     </div>
-                    <hr/>
-                </Col>
-            </Row>
-            <Row className='mt-4 pl-3 pr-3'>
-                {
-                    products.map((product, key) =>
-                        <Col xl="4" sm="6" key={"_col_" + key}>
-                            <Card style={styles.cardBorder}>
-                                <CardBody>
-                                        <div className="product-img position-relative">
-                                            {
-                                                product['image'] === '/static/forever/img/no-image.png' ?
-                                                    <img src={noImage} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
-                                                    :
-                                                    <img src={product['image']} alt="" className="img-fluid mx-auto d-block" style={styles.image} />
-                                            }
-                                        </div>
-                                        <div className="mt-4 text-center">
-                                            <h5 className="mb-3 text-truncate">
-                                                {product['name']}
-                                            </h5>
-                                            <div className="text-muted mb-1">
-                                                {'Core Count : ' + product['coreCount']}
-                                            </div>
-                                            <div className="text-muted mb-1">
-                                                {'Core Clock : ' + product['coreClock']}
-                                            </div>
-                                            <div className="text-muted mb-1">
-                                                {'Boost Clock : ' + product['boostClock']}
-                                            </div>
-                                            <div className="text-muted mb-1">
-                                                {'TDP : ' + product['tdp']}
-                                            </div>
-                                            <div className="text-muted mb-1">
-                                                {'Integrated Graphics : ' +  product['graphics']}
-                                            </div>
-                                            <div className="text-muted mb-1">
-                                                {'SMT : ' + product['smt']}
-                                            </div>
-                                            <h5 className="my-0">
-                                                {'Price : '}
-                                                {
-                                                    product['price'].length ?
-                                                        <b>{product['price']}</b>
-                                                        :
-                                                        <del>Out of Stock</del>
-                                                }
-                                            </h5>
-                                        </div>
-                                    <Button className='mt-2 btn btn-block btn-sm btn-success'>Add</Button>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                    )
-                }
-            </Row>
+                    <div className="mt-4 text-center">
+                        <h5 className="mb-3 text-truncate">
+                            {name}
+                        </h5>
+                        <div className="text-muted mb-1">
+                            {'Core Count : ' + coreCount}
+                        </div>
+                        <div className="text-muted mb-1">
+                            {'Core Clock : ' + coreClock}
+                        </div>
+                        <div className="text-muted mb-1">
+                            {'Boost Clock : ' + boostClock}
+                        </div>
+                        <div className="text-muted mb-1">
+                            {'TDP : ' + tdp}
+                        </div>
+                        <div className="text-muted mb-1">
+                            {'Integrated Graphics : ' + graphics}
+                        </div>
+                        <div className="text-muted mb-1">
+                            {'SMT : ' + smt}
+                        </div>
+                        <h5 className="my-0">
+                            {'Price : '}
+                            {
+                                price.length ?
+                                    <b>{price}</b>
+                                    :
+                                    <del>Out of Stock</del>
+                            }
+                        </h5>
+                    </div>
+                    <Button
+                        className='mt-2 btn btn-block btn-sm btn-success'
+                        onClick={addToCart}
+                    >Add</Button>
+                </CardBody>
+            </Card>
         </React.Fragment>
     )
 };
-
 
 
 const styles = {
