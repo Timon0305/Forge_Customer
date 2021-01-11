@@ -9,7 +9,6 @@ import AppRoute from "./routes/route";
 import HorizontalLayout from "./components/HorizontalLayout/";
 
 import "./assets/scss/theme.scss";
-
 import fakeBackend from './helpers/AuthType/fakeBackend';
 
 fakeBackend();
@@ -20,7 +19,7 @@ class App extends Component {
 		this.state = {  };
 		this.getLayout = this.getLayout.bind(this);
 	}
- 
+
  	/**
 	 * Returns the layout
 	 */
@@ -77,4 +76,4 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, null, )(App);

@@ -118,20 +118,19 @@ export const CPU = (props) => {
                                             {
                                                 vm.products.map((item, index) =>
                                                     <Col xl="4" sm="6" key={index}>
-                                                        <Products
-
-                                                            id={item._id}
-                                                            name={item.name}
-                                                            image={item.image}
-                                                            coreCount={item.coreCount}
-                                                            coreClock={item.coreClock}
-                                                            boostClock={item.boostClock}
-                                                            tdp={item.tdp}
-                                                            graphics={item.graphics}
-                                                            smt={item.smt}
-                                                            price={item.price}
-                                                            addToCart={() => vm.addProduct(item._id)}
-                                                        />
+                                                            <Products
+                                                                id={item._id}
+                                                                name={item.name}
+                                                                image={item.image}
+                                                                coreCount={item.coreCount}
+                                                                coreClock={item.coreClock}
+                                                                boostClock={item.boostClock}
+                                                                tdp={item.tdp}
+                                                                graphics={item.graphics}
+                                                                smt={item.smt}
+                                                                price={item.price}
+                                                                addToCart={() => vm.addProduct(item._id)}
+                                                            />
                                                     </Col>
                                                 )
                                             }

@@ -58,4 +58,14 @@ hr {
     padding-right:  0!important;
     margin-top: 42px!important;
   }
+  .list-content {
+    background: black;
+    margin-top: 124px;
+  }
+}
+@media (max-width: 990px) {
+  .list-content {
+    margin-top: 71px;
+    background: black;
+  }
 }

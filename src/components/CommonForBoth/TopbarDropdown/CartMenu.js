@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {Dropdown, DropdownToggle, DropdownMenu, Row, Col} from "reactstrap";
 import SimpleBar from "simplebar-react";
 import {withNamespaces} from 'react-i18next';
-import {addToCart} from "../../../store/product/actions";
+import {addToCart} from "../../../store/cart/actions";
 
 class CartMenu extends Component {
     constructor(props) {
@@ -137,7 +137,7 @@ class CartMenu extends Component {
     }
 }
 const mapStateToProps = state => {
-    const { products } = state.Product;
+    const { products } = state.Cart;
     return { products };
 };
 

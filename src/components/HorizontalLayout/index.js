@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-
 import {
   changeLayout,
   changeTopbarTheme,
@@ -14,8 +13,8 @@ import Navbar from "./Navbar";
 import Header from "./Header";
 import Footer from "./Footer";
 import Rightbar from "../CommonForBoth/Rightbar";
-
 class Layout extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -67,6 +66,7 @@ class Layout extends Component {
     if (this.props.showRightSidebar) {
       this.toggleRightSidebar();
     }
+
   }
 
   /**
@@ -116,4 +116,4 @@ const mapStatetoProps = state => {
 };
 export default connect(mapStatetoProps, {
   changeTopbarTheme, toggleRightSidebar, changeLayout, changeLayoutWidth
-})(withRouter(Layout));
+}, )(withRouter(Layout));

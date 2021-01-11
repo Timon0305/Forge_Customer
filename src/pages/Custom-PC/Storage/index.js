@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container, Row, Col, Card, Input, Label, CardBody, Button} from "reactstrap";
-import {Link} from "react-router-dom";
 import classes from '../../Dashboard/BackgroundVideo.module.css';
 import useViewModel from "./props";
 import Nouislider from "nouislider-react";

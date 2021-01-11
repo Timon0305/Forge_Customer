@@ -1,18 +1,16 @@
 import {useState, useEffect} from 'react';
-
 import RestApi from "../../../service/RestApi";
-import {addToCart} from "../../../store/product/actions";
 import {useDispatch} from "react-redux";
+import {addToList} from "../../../store/list/actions";
 
-function useViewModel() {
+function useViewModel(props) {
     const dispatch = useDispatch();
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
     const [series, setSeries] = useState([]);
     const [graphics, setGraphics] = useState([]);
-    const [cartProduct, setCartProduct] = useState([]);
-    const [cartNum, setCartNum] = useState(1);
+    const [listProduct, setListProduct] = useState([]);
     const [fCount, setFCount] = useState('1');
     const [tCount, setTCount] = useState('64');
     const [fClock, setFClock] = useState('1.10');
@@ -89,40 +87,35 @@ function useViewModel() {
     };
 
     const getCartProduct = () => {
-        let products = JSON.parse(sessionStorage.getItem('cartItems')) === null ? [] : JSON.parse(sessionStorage.getItem('cartItems'));
-        setCartProduct(products);
+        let product = JSON.parse(sessionStorage.getItem('listItems')) === null
+            ? [] :
+            JSON.parse(sessionStorage.getItem('listItems'));
+        setListProduct(product);
     };
 
     const addProduct = (id) => {
-        let price = 0;
-        for (let product of products) {
-            if (product._id === id) {
-                if (cartProduct.length === 0) {
-                    product.quantity = cartNum;
-                    cartProduct.push(product);
-                    price = parseFloat(product['price'] * parseInt(cartNum))
-                }
-                else {
-                    let newProduct = true;
-                    for (let cartItem of cartProduct) {
-                        if (cartItem['_id'] === id) {
-                            price = parseFloat(product['price']) * parseInt(cartNum);
-                            cartItem.quantity += cartNum;
-                            newProduct = false;
-                        }
-                    }
-                    if (newProduct) {
-                        product.quantity = cartNum;
-                        price = parseFloat(product['price']) * parseInt(cartNum);
-                        cartProduct.push(product)
+        let newComponent = 'cpu';
+        for (let item of products) {
+            if (item._id === id) {
+                if (listProduct.length === 0) {
+                    item.component = newComponent;
+                    listProduct.push(item);
+                } else {
+                    let foundIndex =  listProduct.findIndex(x => x.component === newComponent);
+                    if (foundIndex === -1){
+                        item.component = newComponent;
+                        listProduct.push(item)
+                    } else {
+                        item.component = newComponent;
+                        listProduct[foundIndex] = item;
                     }
                 }
-                dispatch(addToCart(cartProduct));
 
-                sessionStorage.setItem('cartItems', JSON.stringify(cartProduct));
-                break;
             }
         }
+        sessionStorage.setItem('listItems', JSON.stringify(listProduct));
+        dispatch(addToList(listProduct));
+        props.history.push('/products/list')
     };
 
     return {
@@ -138,8 +131,7 @@ function useViewModel() {
         sManufacturer, setSManufacturer,
         sSeries, setSSeries,
         sGraphics, setSGraphics,
-        cartProduct, setCartProduct,
-        cartNum, setCartNum,
+        listProduct, setListProduct,
         filterManufacturer,
         filterSeries,
         filterGraphics,

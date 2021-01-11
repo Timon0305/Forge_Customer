@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-
-
 //Ecommerce Pages
 import EcommerceProducts from "../pages/Ecommerce/EcommerceProducts";
 import EcommerceProductDetail from "../pages/Ecommerce/EcommerceProductDetail";
@@ -12,7 +10,6 @@ import EcommerceCart from "../pages/Ecommerce/EcommerceCart";
 import EcommerceCheckout from "../pages/Ecommerce/EcommerceCheckout";
 import EcommerceShops from "../pages/Ecommerce/EcommerceShops";
 import EcommerceAddProduct from "../pages/Ecommerce/EcommerceAddProduct";
-
 
 // Authentication related pages
 import Login from "../pages/Authentication/Login";
@@ -37,6 +34,7 @@ import {CPUCooler} from '../pages/Custom-PC/CPU-Cooler/index';
 import {Case} from '../pages/Custom-PC/Case/index';
 import {Storage} from '../pages/Custom-PC/Storage/index';
 import {Software} from '../pages/Custom-PC/Operating-Software/index';
+import {List} from "../pages/List";
 
 const publicRoutes = [
 
@@ -51,6 +49,8 @@ const publicRoutes = [
 	{ path : '/products/case', component: Case},
 	{ path : '/products/storage', component: Storage},
 	{ path : '/products/operating-system', component: Software},
+
+	{ path : '/products/list', component: List},
 
 
 	{ path: "/ecommerce-products", component: EcommerceProducts },

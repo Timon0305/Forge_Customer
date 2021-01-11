@@ -1,16 +1,15 @@
 import {useState, useEffect} from 'react';
 import RestApi from "../../../service/RestApi";
 import {useDispatch} from "react-redux";
-import {addToCart} from "../../../store/product/actions";
-function useViewModel() {
+import {addToList} from "../../../store/list/actions";
+function useViewModel(props) {
     const dispatch = useDispatch();
     const [products, setProducts] = useState([]);
     const [productLength, setProductLength] = useState();
     const [manufacturer, setManufacturer] = useState([]);
     const [types, setTypes] = useState([]);
     const [factor, setFactor] = useState([]);
-    const [cartProduct, setCartProduct] = useState([]);
-    const [cartNum, setCartNum] = useState(1);
+    const [listProduct, setListProduct] = useState([]);
     const [fPrice, setFPrice] = useState('0');
     const [tPrice, setTPrice] = useState('6399');
     const [fCapacity, setFCapacity] = useState('8');
@@ -93,40 +92,26 @@ function useViewModel() {
     };
 
     const getCartProduct = () => {
-        let products = JSON.parse(sessionStorage.getItem('cartItems')) === null ? [] : JSON.parse(sessionStorage.getItem('cartItems'));
-        setCartProduct(products);
+        let product = JSON.parse(sessionStorage.getItem('listItems')) === null
+            ? [] :
+            JSON.parse(sessionStorage.getItem('listItems'));
+        setListProduct(product);
     };
 
     const addProduct = (id) => {
-        let price = '';
-        for (let product of products) {
-            if (product._id === id) {
-                if (cartProduct.length === 0) {
-                    product.quantity = cartNum;
-                    cartProduct.push(product);
-                    price = parseFloat(product['price'] * parseInt(cartNum))
+        const newComponent = 'memory';
+        for (let item of products) {
+            if (item._id === id) {
+                for (let i = 0 ; i < listProduct.length; i ++) {
+                    listProduct[i].key = i;
                 }
-                else {
-                    let newProduct = true;
-                    for (let cartItem of cartProduct) {
-                        if (cartItem['_id'] === id) {
-                            price = parseFloat(product['price']) * parseInt(cartNum);
-                            cartItem.quantity += cartNum;
-                            newProduct = false;
-                        }
-                    }
-                    if (newProduct) {
-                        product.quantity = cartNum;
-                        price = parseFloat(product['price']) * parseInt(cartNum);
-                        cartProduct.push(product)
-                    }
-                }
-                dispatch(addToCart(cartProduct));
-
-                sessionStorage.setItem('cartItems', JSON.stringify(cartProduct));
-                break;
+                item.component = newComponent;
+                listProduct.push(item);
             }
         }
+        sessionStorage.setItem('listItems', JSON.stringify(listProduct));
+        dispatch(addToList(listProduct));
+        props.history.push('/products/list')
     };
 
     return {
@@ -144,8 +129,7 @@ function useViewModel() {
         sManufacturer, setSManufacturer,
         sType, setSType,
         sFactor, setSFactor,
-        cartProduct, setCartProduct,
-        cartNum, setCartNum,
+        listProduct, setListProduct,
         filterManufacturer,
         filterPrice,
         filterCapacity,
