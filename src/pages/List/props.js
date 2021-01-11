@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 function useViewModel() {
     const data = useSelector(state => state.List);
+    const [tax, setTax] = useState('');
     const [productList, setProductList] = useState([]);
 
     useEffect(() => {
@@ -20,6 +21,7 @@ function useViewModel() {
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     return {
+        tax, setTax,
         productList, setProductList
     }
 }

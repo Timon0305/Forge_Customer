@@ -99,7 +99,7 @@ function useViewModel(props) {
     };
 
     const addProduct = (id) => {
-        const newComponent = 'memory';
+        const newComponent = 'storage';
         for (let item of products) {
             if (item._id === id) {
                 for (let i = 0 ; i < listProduct.length; i ++) {

@@ -75,7 +75,7 @@ function useViewModel(props) {
     };
 
     const addProduct = (id) => {
-        let newComponent = 'cooler';
+        let newComponent = 'cpu-cooler';
         for (let item of products) {
             if (item._id === id) {
                 if (listProduct.length === 0) {

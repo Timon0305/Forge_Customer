@@ -106,7 +106,7 @@ function useViewModel(props) {
     };
 
     const addProduct = (id) => {
-        let newComponent = 'cpu';
+        let newComponent = 'motherboard';
         for (let item of products) {
             if (item._id === id) {
                 if (listProduct.length === 0) {

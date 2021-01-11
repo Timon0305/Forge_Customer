@@ -105,7 +105,7 @@ function useViewModel(props) {
     };
 
     const addProduct = (id) => {
-        let newComponent = 'case';
+        let newComponent = 'power-supply';
         for (let item of products) {
             if (item._id === id) {
                 if (listProduct.length === 0) {
