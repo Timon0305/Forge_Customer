@@ -79,8 +79,7 @@ export const List = (props) => {
                                     <Row className="mt-4">
                                         <Col sm="12">
                                             <div className="text-right mt-2 mt-sm-0">
-                                                <Link to="/ecommerce-checkout" className="btn btn-success">
-                                                    <i className="mdi mdi-cart-arrow-right mr-1"/> Checkout </Link>
+                                                    <i className="mdi mdi-cart-arrow-right mr-1"/> Checkout
                                             </div>
                                         </Col>
                                     </Row>
